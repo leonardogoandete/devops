@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8acfb0e1b65f2ee6",
+        "id": "6ec8d4964036b5fa",
         "type": "tabs",
         "children": [
           {
-            "id": "43a2d349bb9dbb07",
+            "id": "801a8736924d716e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/ReplicaSet.md",
+                "file": "Kubernetes/Kubernetes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/ReplicaSet.md",
+                "file": "Kubernetes/Kubernetes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/ReplicaSet.md",
+                "file": "Kubernetes/Kubernetes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/ReplicaSet.md"
+                "file": "Kubernetes/Kubernetes.md"
               }
             }
           },
@@ -155,11 +155,12 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "43a2d349bb9dbb07",
+  "active": "801a8736924d716e",
   "lastOpenFiles": [
-    "Kubernetes/Kubernetes.md",
-    "Kubernetes/POD.md",
     "Kubernetes/Criando clusters.md",
+    "Kubernetes/Kubernetes.md",
+    "Kubernetes/ReplicaSet.md",
+    "Kubernetes/POD.md",
     "imagens/Untitled.png",
     "imagens/Untitled 1.png",
     "imagens/Untitled 10.png",
@@ -177,7 +178,6 @@
     "Grafana Loki.md",
     "DevOps AWS.md",
     "DevOps.md",
-    "Kubernetes/ReplicaSet.md",
     "Docker 2.0/VM vs Containers.md",
     "Docker 2.0/Troubleshooting.md",
     "Docker 2.0/Segurança.md",
