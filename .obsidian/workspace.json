@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "ace61374fddac71a",
+    "type": "split",
+    "children": [
+      {
+        "id": "8acfb0e1b65f2ee6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "43a2d349bb9dbb07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/ReplicaSet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e8f3de22a68f1080",
+    "type": "split",
+    "children": [
+      {
+        "id": "4173694943a96446",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c698dd813ed4e240",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8d5f7994ea7f3fbe",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "952e0c922a0c6e8b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2a1975e0fec0bb47",
+    "type": "split",
+    "children": [
+      {
+        "id": "4eff08309feb2d1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "00d24602bdd23af2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kubernetes/ReplicaSet.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f7e4c4e04abc052e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kubernetes/ReplicaSet.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "36acd4f645ec8ade",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d41416394d9df12a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kubernetes/ReplicaSet.md"
+              }
+            }
+          },
+          {
+            "id": "b34c90496c53bb31",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 377.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "43a2d349bb9dbb07",
+  "lastOpenFiles": [
+    "Kubernetes/Kubernetes.md",
+    "Kubernetes/POD.md",
+    "Kubernetes/Criando clusters.md",
+    "imagens/Untitled.png",
+    "imagens/Untitled 1.png",
+    "imagens/Untitled 10.png",
+    "imagens/Untitled 9.png",
+    "imagens/Untitled 8.png",
+    "imagens/Untitled 7.png",
+    "imagens/Untitled 6.png",
+    "imagens/Untitled 5.png",
+    "imagens/Untitled 4 2.png",
+    "imagens/Untitled 3 2.png",
+    "Ansible.md",
+    "Kubernetes 2.0 - Aplicações.md",
+    "Jenkins.md",
+    "Jaeger.md",
+    "Grafana Loki.md",
+    "DevOps AWS.md",
+    "DevOps.md",
+    "Kubernetes/ReplicaSet.md",
+    "Docker 2.0/VM vs Containers.md",
+    "Docker 2.0/Troubleshooting.md",
+    "Docker 2.0/Segurança.md",
+    "Docker 2.0/Resiliência e Gerenciamento de Recursos.md",
+    "Docker 2.0/O que e um container.md",
+    "Docker 2.0/Network.md",
+    "Docker 2.0/Multstage build.md",
+    "Docker 2.0/Dockerfile.md",
+    "Docker 2.0/Docker Volume.md",
+    "Docker 2.0/Docker SDK.md",
+    "Docker 2.0/Docker API.md",
+    "Docker 2.0/Docker 2.0.md",
+    "Docker 2.0/Container sem Docker.md",
+    "Docker 2.0/Compose.md",
+    "imagens",
+    "meu_notion/Docker 2.0/Untitled.canvas",
+    "Docker 2.0/Segurança",
+    "Docker 2.0/Network",
+    "Docker 2.0/Docker Volume",
+    "Notion/TCC/App IF",
+    "Kubernetes",
+    "Docker 2.0",
+    "Notion/TCC",
+    "Notion/DevOps",
+    "Notion"
+  ]
+}
