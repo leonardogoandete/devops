@@ -73,3 +73,60 @@ Para acessar basta pegar o IP de um dos nós do kubernetes e obter a porta.
 ```bash
 curl http://172.19.0.2:30291/q/health
 ```
+
+---
+### **LoadBalancer**
+
+O Service do tipo LoadBalancer também gera uma comunicação externa, porem é utilizado o serviço de provedor de nuvem para fornecer um IP para acessar o serviço.
+
+![](../imagens/exemplo-loadbalancer-service.png)
+
+Exemplo de um service usando LoadBalancer:
+Obs.: Esse tipo é somente para serviço em nuvem ou on-promisse que forneça um IP.
+```yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cadastro-service-teste
+spec:
+  selector:
+    app: cadastro # Utilizar o mesmo definido no Label do pod.
+  ports:
+    - protocol: TCP
+      port: 8083 # porta do service
+      targetPort: 8080 #porta do pod
+  type: LoadBalancer # Se eu não definir o type o default é ClusterIP.
+```
+
+Ao aplicar o arquivo no kubernetes local como o Kind, ele ficará em `pending`
+
+![](../imagens/exemplo-lb-pending.png)
+
+---
+### **ExternalName**
+
+O tipo ExternalName funciona de um formato oposto, ou seja será um service para acessar recursos externos de forma padronizada. Sempre o pod necessitar o acesso externamente nunca será direto, sera usado o service.
+
+Nesse formato não necessito alterar um deployment para trocar um IP do serviço externo por exemplo.
+
+![](../imagens/exemplo-externalname.png)
+
+Exemplo de um service usando LoadBalancer:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: exemplo-service
+spec:
+  type: ExternalName
+  externalName: meu-servico-externo.com
+```
+
+Ao executarmos o curl dentro do pod, devemos ter o mesmo resultado ao acessar a pagina no navegador por exemplo.
+
+Obs.: Lembrar que a url é utilizando o nome do service.
+
+```bash
+curl http://exemplo-service/api/v2
+```
