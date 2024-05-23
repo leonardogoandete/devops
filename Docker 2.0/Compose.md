@@ -37,10 +37,10 @@ services:
   nginx:
     #para dar um nome no container
     container_name: nginx
-		#todo container usa uma imagem. Ex.: nginx:latest
+	#todo container usa uma imagem. Ex.: nginx:latest
     image: nginx:latest
-		#mapeando port bind
-		ports:
+	#mapeando port bind
+	ports:
       - "8080:80"
 ```
 
@@ -57,10 +57,10 @@ services:
   banco:
     #para dar um nome no container
     container_name: banco_dados
-		#todo container usa uma imagem. Ex.: nginx:latest
+	#todo container usa uma imagem. Ex.: nginx:latest
     image: postgres:12.17
-		#mapeando port bind
-		ports:
+	#mapeando port bind
+	ports:
       - "5432:5432"
     #para definir variavéis de ambiente
     envoriment:
@@ -129,13 +129,13 @@ services:
   banco:
     container_name: banco_dados
     image: postgres:12.17
-		ports:
+	ports:
       - "5432:5432"
     envoriment:
       POSTGRES_PASSWORD: Pg123
       POSTGRES_USER: usuario
       POSTGRES_DB: database
-		#mapeando o volume maquina host para o container
+	#mapeando o volume maquina host para o container
     # nesse exemplo é usado o diretório local, se não 
     # existir a pasta "postgre_vol", será criada automaticamente
     volumes: 
@@ -154,13 +154,13 @@ services:
   banco:
     container_name: banco_dados
     image: postgres:12.17
-		ports:
+	ports:
       - "5432:5432"
     envoriment:
       POSTGRES_PASSWORD: Pg123
       POSTGRES_USER: usuario
       POSTGRES_DB: database
-		#mapeando o volume gerenciado para o container
+	#mapeando o volume gerenciado para o container
     # nesse exemplo é usado o volume criado na propriedade "volumes"
     # mais abaixo do código, e referenciado no volumes dentro do service.
     volumes: 
@@ -347,7 +347,7 @@ services:
   nginx:
     container_name: nginx
     image: nginx:latest
-		ports:
+	ports:
       - "8080:80"
     command:
       - echo

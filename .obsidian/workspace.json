@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker 2.0/VM vs Containers.md",
+                "file": "Docker 2.0/Compose.md",
                 "mode": "source",
                 "source": false
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker 2.0/VM vs Containers.md",
+                "file": "Docker 2.0/Compose.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker 2.0/VM vs Containers.md",
+                "file": "Docker 2.0/Compose.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker 2.0/VM vs Containers.md"
+                "file": "Docker 2.0/Compose.md"
               }
             }
           },
@@ -227,6 +227,7 @@
   },
   "active": "29becfbca397051e",
   "lastOpenFiles": [
+    "Docker 2.0/VM vs Containers.md",
     "Docker 2.0/Troubleshooting.md",
     "Docker 2.0/Segurança.md",
     "Docker 2.0/Resiliência e Gerenciamento de Recursos.md",
@@ -245,7 +246,6 @@
     "imagens/Untitled 7.png",
     "imagens/Untitled 1 5.png",
     "imagens/Untitled 1 3.png",
-    "Docker 2.0/VM vs Containers.md",
     "imagens/arq-container.png",
     "imagens/arq-maquina-virtual.png",
     "imagens/arquitetura-network.png",
