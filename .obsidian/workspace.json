@@ -11,11 +11,10 @@
             "id": "29becfbca397051e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "Docker 2.0/Docker Volume/bind.md",
-                "mode": "source",
-                "source": false
+                "file": ".obsidian/workspace.json",
+                "staged": false
               }
             }
           }
@@ -85,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker 2.0/Docker Volume/bind.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker 2.0/Docker Volume/bind.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +121,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Docker 2.0/Docker Volume/bind.md"
-              }
+              "state": {}
             }
           },
           {
@@ -157,12 +152,14 @@
   },
   "active": "29becfbca397051e",
   "lastOpenFiles": [
-    "Kubernetes/1 - Kubernetes.md",
-    "Kubernetes/2 - Criando clusters.md",
     "Kubernetes/3 - POD.md",
-    "imagens/Untitled.md",
+    "imagens/descobrindo-versao-api.png",
     "Kubernetes/4 - ReplicaSet.md",
     "Kubernetes/5 - Deployment.md",
+    "Docker 2.0/Docker Volume/bind.md",
+    "Kubernetes/1 - Kubernetes.md",
+    "Kubernetes/2 - Criando clusters.md",
+    "imagens/Untitled.md",
     "imagens/deployment-history.png",
     "imagens/replicaset-versao.png",
     "imagens/pod-deployment-novo.png",
@@ -173,7 +170,6 @@
     "imagens/Untitled 1.png",
     "imagens/Untitled 10.png",
     "imagens/Untitled 9.png",
-    "imagens/Untitled 8.png",
     "Kubernetes 2.0 - Aplicações.md",
     "Jenkins.md",
     "Jaeger.md",
@@ -191,8 +187,6 @@
     "Docker 2.0/Docker Volume.md",
     "Docker 2.0/Docker SDK.md",
     "Docker 2.0/Docker API.md",
-    "Docker 2.0/Docker 2.0.md",
-    "Docker 2.0/Container sem Docker.md",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
     "Docker 2.0/Segurança",
