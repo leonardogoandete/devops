@@ -1,8 +1,6 @@
-## Arquitetura do cluster:
+## Arquitetura do cluster
 
-  
-
-![](../imagens/Untitled.png)
+![](../imagens/arquitetura-kubernetes.png)
 
   
 

@@ -11,10 +11,31 @@
             "id": "29becfbca397051e",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "Docker 2.0/Arquitetura Docker.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "829a351bedde941e",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "imagens/arq-docker-interno.png"
+              }
+            }
+          },
+          {
+            "id": "9363c895f5ef70cb",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "imagens/arq-docker-windows.png"
               }
             }
           }
@@ -84,6 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Docker 2.0/Arquitetura Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Docker 2.0/Arquitetura Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Docker 2.0/Arquitetura Docker.md"
+              }
             }
           },
           {
@@ -152,41 +177,42 @@
   },
   "active": "29becfbca397051e",
   "lastOpenFiles": [
-    "Kubernetes/3 - POD.md",
-    "imagens/descobrindo-versao-api.png",
-    "Kubernetes/4 - ReplicaSet.md",
-    "Kubernetes/5 - Deployment.md",
+    "imagens/arq-docker-interno.png",
+    "Docker 2.0/Arquitetura Docker.md",
+    "imagens/arq-docker-windows.png",
+    "imagens/arq-docker.png",
+    "Docker 2.0/Segurança/Trivy.md",
+    "Docker 2.0/Segurança/Docker Scout.md",
+    "imagens/docker-scout-cve.png",
+    "imagens/docker-scout.png",
+    "Docker 2.0/Segurança/Distroless.md",
+    "Docker 2.0/Segurança/Assinatura de Imagem.md",
+    "imagens/assinatura-imagem.png",
+    "Docker 2.0/Network/overlay.md",
+    "Docker 2.0/Network/none.md",
+    "imagens/network-none.png",
+    "Docker 2.0/Network/macvlan.md",
+    "Docker 2.0/Network/host.md",
+    "imagens/network-host.png",
+    "Docker 2.0/Network/Domínio no container.md",
+    "Docker 2.0/Network/bridge.md",
+    "imagens/ifconfig-nova-rede.png",
+    "imagens/bridge-duas-interface.png",
+    "imagens/como-funciona-bridge.png",
+    "Docker 2.0/Docker Volume/volume.md",
+    "Docker 2.0/Docker Volume/tmpfs.md",
     "Docker 2.0/Docker Volume/bind.md",
     "Kubernetes/1 - Kubernetes.md",
     "Kubernetes/2 - Criando clusters.md",
+    "Kubernetes/3 - POD.md",
     "imagens/Untitled.md",
-    "imagens/deployment-history.png",
-    "imagens/replicaset-versao.png",
-    "imagens/pod-deployment-novo.png",
-    "imagens/lista-pods-deployment.png",
+    "Kubernetes/4 - ReplicaSet.md",
+    "Kubernetes/5 - Deployment.md",
     "Ansible.md",
-    "imagens/deployment.png",
-    "imagens/Untitled.png",
-    "imagens/Untitled 1.png",
-    "imagens/Untitled 10.png",
-    "imagens/Untitled 9.png",
     "Kubernetes 2.0 - Aplicações.md",
     "Jenkins.md",
     "Jaeger.md",
     "Grafana Loki.md",
-    "DevOps AWS.md",
-    "DevOps.md",
-    "Docker 2.0/VM vs Containers.md",
-    "Docker 2.0/Troubleshooting.md",
-    "Docker 2.0/Segurança.md",
-    "Docker 2.0/Resiliência e Gerenciamento de Recursos.md",
-    "Docker 2.0/O que e um container.md",
-    "Docker 2.0/Network.md",
-    "Docker 2.0/Multstage build.md",
-    "Docker 2.0/Dockerfile.md",
-    "Docker 2.0/Docker Volume.md",
-    "Docker 2.0/Docker SDK.md",
-    "Docker 2.0/Docker API.md",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
     "Docker 2.0/Segurança",

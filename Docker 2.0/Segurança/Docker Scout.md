@@ -18,7 +18,7 @@ Comando para verificação de imagens:
 
 O comando abaixo ele da um overview resumido das vulnerabilidades.
 
-![[imagens/Untitled 14.png|Untitled 14.png]]
+![](docker-scout.png)
 
 ```Bash
 docker scout quickview <image>
@@ -30,7 +30,7 @@ docker scout quickview <image>
 
 Comando para informações detalhadas das CVEs.
 
-![[imagens/Untitled 1 7.png|Untitled 1 7.png]]
+![](docker-scout-cve.png)
 
 ```Bash
 docker scout cves leogoandete/postagens

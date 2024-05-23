@@ -24,7 +24,7 @@ Docker Registry é um serviço que armazena e distribui imagens Docker. Ele perm
 
   
 
-![[imagens/Untitled 3.png|Untitled 3.png]]
+![](arq-docker.png)
 
   
 
@@ -36,7 +36,7 @@ Docker Registry é um serviço que armazena e distribui imagens Docker. Ele perm
 
 Docke atualmente:
 
-![[imagens/Untitled 1 2.png]]
+![](arq-docker-interno.png)
 
   
 
@@ -54,7 +54,7 @@ A integração do Docker com o WSL 2 no Windows proporciona uma experiência mai
 
   
 
-![[imagens/Untitled 2 2.png]]
+![](arq-docker-windows.png)
 
   
 

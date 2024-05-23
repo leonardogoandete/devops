@@ -2,9 +2,7 @@ O comando "bind" no Docker permite mapear um diretório da máquina host para um
 
 resumo: Mapeia o diretório da maquina host com o diretório do container.
 
-  
-
-![[imagens/Untitled 8.png|Untitled 8.png]]
+![](volume-bind.png)
 
 ### ==Obs.: FileSystem é o sistema de arquivos da maquina Host.==
 
@@ -30,7 +28,7 @@ Ao criar um arquivo na maquina host ele ficará com o usuário de onde foi criad
 
 Ex.:
 
-![[imagens/Untitled 1 4.png|Untitled 1 4.png]]
+![](bind-volume-create.png)
 
 O arquivo da linha 1 foi criado dentro do container.
 

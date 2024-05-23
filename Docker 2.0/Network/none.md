@@ -10,4 +10,4 @@ docker container run --network none ubuntu
 
   
 
-![[imagens/Untitled 13.png|Untitled 13.png]]
+![](network-none.png)
