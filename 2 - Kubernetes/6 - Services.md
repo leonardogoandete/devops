@@ -6,7 +6,7 @@ Vamos acessar o service discovery, ele vai fornecer um IP de algum pod para aces
 
 Possuímos diversos tipos de services, veremos a seguir.
 
-
+---
 ### **ClusterIP**
 
 O ClusterIP serve para gerar conexão entre pods dentro do cluster, não haverá conexão externa.
@@ -15,7 +15,7 @@ O ClusterIP serve para gerar conexão entre pods dentro do cluster, não haverá
 
 Neste exemplo, o POD A, precisa acessar o POD B, porem não será acessado diretamente, desta forma é criado o service do tipo ClusterIP e o POD A acessará algum POD B através do service.
 
-Exemplo de um service:
+Exemplo de um service usando ClusterIP:
 
 ```yml
 apiVersion: v1
@@ -38,3 +38,38 @@ No exemplo abaixo o front se comunica com as api de cadastro através do cadastr
 
 ![](../imagens/exemplo-cadastro-service.png)
 
+---
+### **NodePort**
+
+O Service do tipo NodePort gera uma comunicação externa, porem o acesso aos pods é feito por uma porta do cluster kubernetes.
+O range de portas liberadas é 30000-32777, então ele escolhe uma porta destas e faz o bind com os pods.
+
+Neste caso vamos utilizar os IPs do cluster do kube. Se o pod não estiver rodando no nós do cluster escolhido o kube proxy fará o redirecionamento correto.
+
+![](../imagens/exemplo-nodeport.png)
+
+Exemplo de um service usando NodePort:
+
+```yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cadastro-service-teste
+spec:
+  selector:
+    app: cadastro # Utilizar o mesmo definido no Label do pod.
+  ports:
+    - protocol: TCP
+      port: 8083 # porta do service
+      targetPort: 8080 #porta do pod
+  type: NodePort # Se eu não definir o type o default é ClusterIP.
+
+```
+
+Para acessar basta pegar o IP de um dos nós do kubernetes e obter a porta.
+
+![[exemplo-curl-nodeport.png]]
+
+```bash
+curl http://172.19.0.2:30291/q/health
+```
