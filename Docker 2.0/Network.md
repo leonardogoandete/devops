@@ -34,7 +34,7 @@ Utilizando a Docker Network, é possível criar uma infraestrutura de rede flex�
 
 ### Arquitetura:
 
-![](../../imagens/arquitetura-network.png)
+![](../imagens/arquitetura-network.png)
 
   
 

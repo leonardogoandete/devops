@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker 2.0/Arquitetura Docker.md",
+                "file": "Docker 2.0/VM vs Containers.md",
                 "mode": "source",
                 "source": false
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker 2.0/Arquitetura Docker.md",
+                "file": "Docker 2.0/VM vs Containers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker 2.0/Arquitetura Docker.md",
+                "file": "Docker 2.0/VM vs Containers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker 2.0/Arquitetura Docker.md"
+                "file": "Docker 2.0/VM vs Containers.md"
               }
             }
           },
@@ -227,22 +227,13 @@
   },
   "active": "29becfbca397051e",
   "lastOpenFiles": [
-    "imagens/volume-bind.png",
-    "imagens/Untitled 7.png",
-    "imagens/Untitled 1 5.png",
-    "imagens/Untitled 1 3.png",
-    "Docker 2.0/VM vs Containers.md",
-    "imagens/arq-container.png",
-    "imagens/arq-maquina-virtual.png",
     "Docker 2.0/Troubleshooting.md",
     "Docker 2.0/Segurança.md",
     "Docker 2.0/Resiliência e Gerenciamento de Recursos.md",
     "Docker 2.0/O que e um container.md",
     "Docker 2.0/Network.md",
-    "imagens/arquitetura-network.png",
     "Docker 2.0/Multstage build.md",
     "Docker 2.0/Dockerfile.md",
-    "imagens/dockerfile-cheat.png",
     "Docker 2.0/Docker Volume.md",
     "Docker 2.0/Docker SDK.md",
     "Docker 2.0/Docker API.md",
@@ -250,6 +241,15 @@
     "Docker 2.0/Container sem Docker.md",
     "Docker 2.0/Compose.md",
     "Docker 2.0/Arquitetura Docker.md",
+    "imagens/volume-bind.png",
+    "imagens/Untitled 7.png",
+    "imagens/Untitled 1 5.png",
+    "imagens/Untitled 1 3.png",
+    "Docker 2.0/VM vs Containers.md",
+    "imagens/arq-container.png",
+    "imagens/arq-maquina-virtual.png",
+    "imagens/arquitetura-network.png",
+    "imagens/dockerfile-cheat.png",
     "Docker 2.0/Segurança/Trivy.md",
     "Docker 2.0/Segurança/Docker Scout.md",
     "Docker 2.0/Segurança/Distroless.md",
@@ -262,7 +262,6 @@
     "Docker 2.0/Network/bridge.md",
     "imagens/docker-volume.png",
     "imagens/arq-docker-interno.png",
-    "imagens/arq-docker-windows.png",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
     "Docker 2.0/Segurança",

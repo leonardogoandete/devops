@@ -2,7 +2,7 @@
 
 Contem as camadas:
 
-![](../../imagens/arq-maquina-virtual.png)
+![](../imagens/arq-maquina-virtual.png)
 
 VMs: Cada vm acessa um pouco da infraestrutura de forma virtual e criar uma máquina.
 
@@ -19,7 +19,7 @@ Infraestrutura: memoria, processador e etc.
 
 ## Conteiners:
 
-![](../../imagens/arq-container.png)
+![](../imagens/arq-container.png)
 
   
 

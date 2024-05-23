@@ -54,7 +54,7 @@ ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
   
 
-![](../../imagens/dockerfile-cheat.png)
+![](../imagens/dockerfile-cheat.png)
 
   
 
