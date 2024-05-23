@@ -12,7 +12,7 @@ Em resumo, um volume gerenciado pelo Docker é uma forma de persistir e comparti
 
   
 
-![[imagens/Untitled 9.png|Untitled 9.png]]
+![](../../imagens/docker-volume.png)
 
 ## Exemplo no Dockerfile
 
@@ -123,4 +123,3 @@ Documentação sobre o Backup/Restore.
 
 [https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes](https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes)
 
-![[imagens/Untitled 1 5.png|Untitled 1 5.png]]

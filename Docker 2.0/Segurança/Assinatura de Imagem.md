@@ -8,7 +8,7 @@ Instalação do Cosign: [https://docs.sigstore.dev/system_config/installation/](
 
   
 
-![](assinatura-imagem.png)
+![](../../imagens/assinatura-imagem.png)
 
 1- Neste passo realizamos o build da imagem, e enviamos ao nosso registry.
 

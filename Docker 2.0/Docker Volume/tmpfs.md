@@ -8,7 +8,7 @@ Obs.: Ele não pode ser compartilhado, somente o container tem acesso.
 
   
 
-![](volume-tmpfs.png)
+![](../../imagens/volume-tmpfs.png)
 
   
 

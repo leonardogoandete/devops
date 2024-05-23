@@ -4,7 +4,7 @@ Ao rodar um `docker container run ubuntu` por exemplo, ele cria um container e u
 
 Neste modelo não temos isolamento.
 
-![](bridge-sem-isolamento.png)
+![](../../imagens/bridge-sem-isolamento.png)
 
   
 
@@ -22,7 +22,7 @@ Ao criar um container novo `docker container run --name nginx --network aula_doc
 
 Se rodarmos o CURL no ubuntu para o nginx usando DNS `curl` [`http://nginx`](http://nginx) teremos a resposta da pagina.
 
-![](create-network.png)
+![](../../imagens/create-network.png)
 
   
 
@@ -48,13 +48,13 @@ _Obs.: Switch é só uma representação no diagrama, mas ali no caso cada conta
 
   
 
-![](como-funciona-bridge.png)
+![](../../imagens/como-funciona-bridge.png)
 
   
 
 Podemos ter container conectado a duas interfaces de rede, conforme abaixo.
 
-![](bridge-duas-interface.png)
+![](../../imagens/bridge-duas-interface.png)
 
   
 
@@ -64,4 +64,4 @@ Podemos ter container conectado a duas interfaces de rede, conforme abaixo.
 
 **br-ed6a5c73353a**= interface da nova rede criada pelo comando `docker network create minha_nova_rede`
 
-![](ifconfig-nova-rede.png)
+![](../../imagens/ifconfig-nova-rede.png)
