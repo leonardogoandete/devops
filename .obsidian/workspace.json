@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6ec8d4964036b5fa",
+        "id": "d501502ba2b15758",
         "type": "tabs",
         "children": [
           {
-            "id": "801a8736924d716e",
+            "id": "29becfbca397051e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/5 - Deployment.md",
+                "file": "Docker 2.0/Docker Volume/bind.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/5 - Deployment.md",
+                "file": "Docker 2.0/Docker Volume/bind.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/5 - Deployment.md",
+                "file": "Docker 2.0/Docker Volume/bind.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/5 - Deployment.md"
+                "file": "Docker 2.0/Docker Volume/bind.md"
               }
             }
           },
@@ -155,17 +155,18 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "801a8736924d716e",
+  "active": "29becfbca397051e",
   "lastOpenFiles": [
-    "imagens/deployment-history.png",
+    "Kubernetes/1 - Kubernetes.md",
+    "Kubernetes/2 - Criando clusters.md",
+    "Kubernetes/3 - POD.md",
+    "imagens/Untitled.md",
+    "Kubernetes/4 - ReplicaSet.md",
     "Kubernetes/5 - Deployment.md",
+    "imagens/deployment-history.png",
     "imagens/replicaset-versao.png",
     "imagens/pod-deployment-novo.png",
     "imagens/lista-pods-deployment.png",
-    "Kubernetes/4 - ReplicaSet.md",
-    "Kubernetes/3 - POD.md",
-    "Kubernetes/2 - Criando clusters.md",
-    "Kubernetes/1 - Kubernetes.md",
     "Ansible.md",
     "imagens/deployment.png",
     "imagens/Untitled.png",

@@ -2,7 +2,7 @@
 
   
 
-![[imagens/Untitled.png]]
+![](../imagens/Untitled.png)
 
   
 

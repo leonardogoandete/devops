@@ -43,7 +43,7 @@ spec:
     kubectl api-resources
     ```
     
-    ![[imagens/Untitled 6.png|Untitled 6.png]]
+    ![[imagens/Untitled 6.png]]
     
 
   
