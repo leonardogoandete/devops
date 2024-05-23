@@ -13,79 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker 2.0/Compose.md",
+                "file": "2 - Kubernetes/5 - Deployment.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "e1086af8442c1be5",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "imagens/arq-container.png"
-              }
-            }
-          },
-          {
-            "id": "8ad5fb65f7249fcf",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "imagens/arq-maquina-virtual.png"
-              }
-            }
-          },
-          {
-            "id": "47d671bb7b5870c9",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "imagens/arquitetura-network.png"
-              }
-            }
-          },
-          {
-            "id": "b5708a503305fb35",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "imagens/dockerfile-cheat.png"
-              }
-            }
-          },
-          {
-            "id": "8937ed6921bd681e",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "imagens/docker-volume.png"
-              }
-            }
-          },
-          {
-            "id": "829a351bedde941e",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "imagens/arq-docker-interno.png"
-              }
-            }
-          },
-          {
-            "id": "9363c895f5ef70cb",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "imagens/arq-docker-windows.png"
               }
             }
           }
@@ -155,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker 2.0/Compose.md",
+                "file": "2 - Kubernetes/5 - Deployment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker 2.0/Compose.md",
+                "file": "2 - Kubernetes/5 - Deployment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker 2.0/Compose.md"
+                "file": "2 - Kubernetes/5 - Deployment.md"
               }
             }
           },
@@ -225,23 +155,24 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "29becfbca397051e",
+  "active": "c698dd813ed4e240",
   "lastOpenFiles": [
-    "Docker 2.0/VM vs Containers.md",
-    "Docker 2.0/Troubleshooting.md",
-    "Docker 2.0/Segurança.md",
-    "Docker 2.0/Resiliência e Gerenciamento de Recursos.md",
-    "Docker 2.0/O que e um container.md",
-    "Docker 2.0/Network.md",
-    "Docker 2.0/Multstage build.md",
-    "Docker 2.0/Dockerfile.md",
-    "Docker 2.0/Docker Volume.md",
-    "Docker 2.0/Docker SDK.md",
-    "Docker 2.0/Docker API.md",
-    "Docker 2.0/Docker 2.0.md",
-    "Docker 2.0/Container sem Docker.md",
-    "Docker 2.0/Compose.md",
-    "Docker 2.0/Arquitetura Docker.md",
+    "1 - Docker 2.0/Docker 2.0.md",
+    "1 - Docker 2.0/8 - Network.md",
+    "1 - Docker 2.0/7 - Docker Volume.md",
+    "1 - Docker 2.0/6 - Multstage build.md",
+    "1 - Docker 2.0/14 - Docker SDK.md",
+    "1 - Docker 2.0/13 - Docker API.md",
+    "1 - Docker 2.0/12 - Segurança.md",
+    "1 - Docker 2.0/11 - Resiliência e Gerenciamento de Recursos.md",
+    "1 - Docker 2.0/10 - Troubleshooting.md",
+    "1 - Docker 2.0/9 - Compose.md",
+    "1 - Docker 2.0/2 - VM vs Containers.md",
+    "1 - Docker 2.0/5 - Dockerfile.md",
+    "1 - Docker 2.0/4 - Arquitetura Docker.md",
+    "1 - Docker 2.0/3 - Container sem Docker.md",
+    "1 - Docker 2.0/1 - O que e um container.md",
+    "2 - Kubernetes/5 - Deployment.md",
     "imagens/volume-bind.png",
     "imagens/Untitled 7.png",
     "imagens/Untitled 1 5.png",
@@ -250,26 +181,26 @@
     "imagens/arq-maquina-virtual.png",
     "imagens/arquitetura-network.png",
     "imagens/dockerfile-cheat.png",
-    "Docker 2.0/Segurança/Trivy.md",
-    "Docker 2.0/Segurança/Docker Scout.md",
-    "Docker 2.0/Segurança/Distroless.md",
-    "Docker 2.0/Segurança/Assinatura de Imagem.md",
-    "Docker 2.0/Network/overlay.md",
-    "Docker 2.0/Network/none.md",
-    "Docker 2.0/Network/macvlan.md",
-    "Docker 2.0/Network/host.md",
-    "Docker 2.0/Network/Domínio no container.md",
-    "Docker 2.0/Network/bridge.md",
+    "1 - Docker 2.0/Segurança/Trivy.md",
+    "1 - Docker 2.0/Segurança/Docker Scout.md",
+    "1 - Docker 2.0/Segurança/Distroless.md",
+    "1 - Docker 2.0/Segurança/Assinatura de Imagem.md",
+    "1 - Docker 2.0/8 - Network/overlay.md",
+    "1 - Docker 2.0/8 - Network/none.md",
+    "1 - Docker 2.0/8 - Network/macvlan.md",
+    "1 - Docker 2.0/8 - Network/host.md",
+    "1 - Docker 2.0/8 - Network/Domínio no container.md",
+    "1 - Docker 2.0/8 - Network/bridge.md",
     "imagens/docker-volume.png",
     "imagens/arq-docker-interno.png",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
-    "Docker 2.0/Segurança",
-    "Docker 2.0/Network",
-    "Docker 2.0/Docker Volume",
+    "1 - Docker 2.0/Segurança",
+    "1 - Docker 2.0/8 - Network",
+    "1 - Docker 2.0/7 - Docker Volume",
     "Notion/TCC/App IF",
-    "Kubernetes",
-    "Docker 2.0",
+    "2 - Kubernetes",
+    "1 - Docker 2.0",
     "Notion/TCC",
     "Notion/DevOps",
     "Notion"
