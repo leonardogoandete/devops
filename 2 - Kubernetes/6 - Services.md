@@ -15,3 +15,26 @@ O ClusterIP serve para gerar conexão entre pods dentro do cluster, não haverá
 
 Neste exemplo, o POD A, precisa acessar o POD B, porem não será acessado diretamente, desta forma é criado o service do tipo ClusterIP e o POD A acessará algum POD B através do service.
 
+Exemplo de um service:
+
+```yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cadastro-service
+spec:
+  selector:
+    app: cadastro # Utilizar o mesmo definido no Label do pod.
+  ports:
+    - protocol: TCP
+      port: 8083 # porta do service
+      targetPort: 8080 #porta do pod
+  type: ClusterIP # Se eu não definir o type o default é ClusterIP.
+
+```
+
+
+No exemplo abaixo o front se comunica com as api de cadastro através do cadastro-service internamente dentro do cluster.
+
+![](../imagens/exemplo-cadastro-service.png)
+

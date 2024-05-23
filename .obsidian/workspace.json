@@ -18,6 +18,16 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "87eb91a43b2d5489",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "imagens/exemplo-cadastro-service.png"
+              }
+            }
           }
         ]
       }
@@ -157,6 +167,7 @@
   },
   "active": "a76540c4e9cd5768",
   "lastOpenFiles": [
+    "imagens/exemplo-cadastro-service.png",
     "2 - Kubernetes/6 - Services.md",
     "imagens/service-clusterip.png",
     "2 - Kubernetes/5 - Deployment.md",
@@ -191,7 +202,6 @@
     "1 - Docker 2.0/8 - Network/none.md",
     "1 - Docker 2.0/8 - Network/macvlan.md",
     "1 - Docker 2.0/8 - Network/host.md",
-    "imagens/docker-volume.png",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
     "1 - Docker 2.0/Segurança",
