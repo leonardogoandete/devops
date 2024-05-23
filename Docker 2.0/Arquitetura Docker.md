@@ -24,7 +24,7 @@ Docker Registry é um serviço que armazena e distribui imagens Docker. Ele perm
 
   
 
-![](../../imagens/arq-docker.png)
+![](../imagens/arq-docker.png)
 
   
 
