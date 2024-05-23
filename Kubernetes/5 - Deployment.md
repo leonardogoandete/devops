@@ -72,7 +72,7 @@ Podemos ver o histórico de versões e podemos fazer rollback do pod.
 kubectl rollout history deployment <nome-deployment>
 ```
 
-![[Pasted image 20240523145855.png]]
+![[deployment-history.png]]
 
 **Fazendo rollback:**
 
