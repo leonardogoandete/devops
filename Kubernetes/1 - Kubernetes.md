@@ -1,5 +1,3 @@
-  
-
 ## Arquitetura do cluster:
 
   
@@ -28,8 +26,8 @@
 
   
 
-[[Criando clusters]]
+[[2 - Criando clusters]]
 
-[[POD]]
+[[3 - POD]]
 
-[[ReplicaSet]]
+[[4 - ReplicaSet]]

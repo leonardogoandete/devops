@@ -2,6 +2,8 @@ Vimos que ao criarmos um POD e se ocorrer do nó cair, excluir o pod ou ele “m
 
 Então precisamos de um objeto que cuide dessa funcionalidade, para isso existe o **ReplicaSet**.
 
+Ele é responsável por gerenciar os PODs.
+
 Ele veio para substituir o Replication Controler em versões mais antigas do kubernetes.
 
 Com o ReplicaSet, conseguimos garantir a quantidade de replicas que desejar, ou o estado da aplicação que se deseja manter para execução.
@@ -61,3 +63,39 @@ Onde é excluído o pod **cadastro-replicaset-jddnc** e ao listar os pods novame
 > 
 > 
 
+
+Ao realizar o *describe* em um pod, podemos verificar qual ReplicaSet está controlando ele, basta encontrar a linha com `Controlled By:  ReplicaSet/cadastro-replicaset`
+
+Podemos testar a escalabilidade ou seja ter mais de um pod rodando, vamos supor que eu desejo ter 3 replicas do serviço de cadastro, utilizamos o código abaixo:
+
+```SHELL
+kubectl scale replicaset <nome-replicaset> --replicas=3
+```
+
+Pode ser definido no arquivo de yaml também na seção de `spec` do ReplicaSet.
+
+```yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: cadastro-replicaset
+spec:
+  # Definindo o numero de replicas desejado
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cadastro
+  template:
+    metadata:
+      labels:
+        app: cadastro
+    spec:
+      containers:
+        - name: cadastro-container
+          image: leogoandete/cadastro:latest
+```
+
+
+Agora caso quisermos atualizar a versão da imagem do meu pod? 
+
+Caso alterarmos no ReplicaSet e aplicarmos, não haverá efeito algum, pois ele não é responsável por gerenciar versão. Para fazer isso apenas deletando os pods porem isso não é viável, pois cada versão tenho que deletar todos os pods, um a um, podemos correr risco de esquecer um pod antigo e o mesmo rodando com uma versão antiga. Para isso vamos ver sobre o Deployment.

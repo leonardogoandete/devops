@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Kubernetes.md",
+                "file": "Kubernetes/5 - Deployment.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Kubernetes.md",
+                "file": "Kubernetes/5 - Deployment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Kubernetes.md",
+                "file": "Kubernetes/5 - Deployment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Kubernetes.md"
+                "file": "Kubernetes/5 - Deployment.md"
               }
             }
           },
@@ -142,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 377.5
+    "width": 414.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,21 +157,23 @@
   },
   "active": "801a8736924d716e",
   "lastOpenFiles": [
-    "Kubernetes/Criando clusters.md",
-    "Kubernetes/Kubernetes.md",
-    "Kubernetes/ReplicaSet.md",
-    "Kubernetes/POD.md",
+    "Pasted image 20240523145855.png",
+    "imagens/replicaset-versao.png",
+    "Kubernetes/5 - Deployment.md",
+    "imagens/pod-deployment-novo.png",
+    "imagens/lista-pods-deployment.png",
+    "Kubernetes/4 - ReplicaSet.md",
+    "Kubernetes/3 - POD.md",
+    "Kubernetes/2 - Criando clusters.md",
+    "Kubernetes/1 - Kubernetes.md",
+    "Ansible.md",
+    "imagens/deployment.png",
     "imagens/Untitled.png",
     "imagens/Untitled 1.png",
     "imagens/Untitled 10.png",
     "imagens/Untitled 9.png",
     "imagens/Untitled 8.png",
     "imagens/Untitled 7.png",
-    "imagens/Untitled 6.png",
-    "imagens/Untitled 5.png",
-    "imagens/Untitled 4 2.png",
-    "imagens/Untitled 3 2.png",
-    "Ansible.md",
     "Kubernetes 2.0 - Aplicações.md",
     "Jenkins.md",
     "Jaeger.md",
@@ -191,7 +193,6 @@
     "Docker 2.0/Docker API.md",
     "Docker 2.0/Docker 2.0.md",
     "Docker 2.0/Container sem Docker.md",
-    "Docker 2.0/Compose.md",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
     "Docker 2.0/Segurança",
