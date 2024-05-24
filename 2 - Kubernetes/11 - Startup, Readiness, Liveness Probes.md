@@ -18,7 +18,7 @@ Quando o `Liveness` está em condições, porem o `Readiness` estando com proble
 `Liveness Probes`: utilizado valida a saúde do contêiner, ele irá sempre chamar o endpoint **`/health`** , caso a saúde não esteja saudável, o pod irá ficar reiniciando até ficar saudável.
 
 A Seguir veremos a configuração de cada probe.
-podemos utilizar varios tipos de teste em cada um deles, sendo eles o `httpGet`,`tcpSocket`,`exec`, `gRPC`.
+podemos utilizar vários tipos de teste em cada um deles, sendo eles o `httpGet`,`tcpSocket`,`exec`, `gRPC`.
 
 ---
 **Configurando Liveness Probe**
