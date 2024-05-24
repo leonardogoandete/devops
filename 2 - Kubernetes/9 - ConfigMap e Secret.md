@@ -113,9 +113,13 @@ spec:
 ```
 
 `valueFrom` informa que o valor da chave para ser definida, será obtida de um configmap.
+
 `configMapKeyRef` informa que sera de uma chave especifica dentro do configmap.
+
 `key` declara o nome da chave onde está o valor desejado.
+
 `name` informa o nome do configmap onde deseja obter o valor.
+
 
 ---
 
