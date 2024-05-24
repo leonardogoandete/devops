@@ -14,3 +14,58 @@ Para isso precisamos configurar 3 recursos fundamentais:
 Quando o `Liveness` está em condições, porem o `Readiness` estando com problema, ele simplesmente não vai ter um endpoind registrado no service.
 
 `Liveness Probes`: utilizado valida a saúde do contêiner, ele irá sempre chamar o endpoint **`/health`** , caso a saúde não esteja saudável, o pod irá ficar reiniciando até ficar saudável.
+
+---
+**Configurando Liveness Probe**
+
+Adicionamos as seguintes informações na declaração do contêiner:
+```yaml
+containers:
+...
+- name: api-exemplo
+  livenessProbe:
+    httpGet:
+      path: /q/health
+      port: 8080
+      scheme: HTTP
+    initialDelaySeconds: 10 # Tempo para iniciar o teste apos o container iniciar  
+    periodSeconds: 15 # Periodo de tempo para cada teste
+    timeoutSeconds: 10 # tempo limite para espera da resposta
+    failureThreshold: 3 # Numero de erros permitido, antes de reiniciar o pod
+    successThreshold: 1 # Numero de sucessos para considerar verdadeiro
+```
+
+---
+**Configurando Readiness Probe**
+Adicionamos as seguintes informações na declaração do contêiner:
+```yaml
+containers:
+...
+- name: api-exemplo
+  readinessProbe:
+    httpGet:
+      path: /q/health/ready
+      port: 8080
+      scheme: HTTP
+    initialDelaySeconds: 10 # Tempo para iniciar o teste apos o container iniciar  
+    periodSeconds: 15 # Periodo de tempo para cada teste
+    timeoutSeconds: 10 # tempo limite para espera da resposta
+    failureThreshold: 3 # Numero de erros permitido, antes de reiniciar o pod
+```
+
+**Configurando Startup**
+Adicionamos as seguintes informações na declaração do contêiner:
+```yaml
+containers:
+...
+- name: api-exemplo
+  startupProbe:
+    httpGet:
+      path: /q/health/started
+      port: 8080
+      scheme: HTTP
+    initialDelaySeconds: 10 # Tempo para iniciar o teste apos o container iniciar  
+    periodSeconds: 15 # Periodo de tempo para cada teste
+    timeoutSeconds: 10 # tempo limite para espera da resposta
+    failureThreshold: 3 # Numero de erros permitido, antes de reiniciar o pod
+```
