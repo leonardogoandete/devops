@@ -11,10 +11,11 @@
             "id": "5b4fa67817b92233",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "2 - Kubernetes/9 - ConfigMap e Secret.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -84,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2 - Kubernetes/9 - ConfigMap e Secret.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2 - Kubernetes/9 - ConfigMap e Secret.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2 - Kubernetes/9 - ConfigMap e Secret.md"
+              }
             }
           },
           {
@@ -150,12 +155,18 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "b34c90496c53bb31",
+  "active": "5b4fa67817b92233",
   "lastOpenFiles": [
+    "2 - Kubernetes/5 - Deployment.md",
+    "2 - Kubernetes/9 - ConfigMap e Secret.md",
+    "2 - Kubernetes/8 - Namespace.md",
+    "1 - Docker 2.0/Segurança/Trivy.md",
+    "1 - Docker 2.0/Segurança/Docker Scout.md",
+    "1 - Docker 2.0/Segurança/Distroless.md",
+    "1 - Docker 2.0/Segurança/Assinatura de Imagem.md",
+    "1 - Docker 2.0/Docker 2.0.md",
     "2 - Kubernetes/6 - Services.md",
     "imagens/service-clusterip.png",
-    "2 - Kubernetes/5 - Deployment.md",
-    "1 - Docker 2.0/Docker 2.0.md",
     "1 - Docker 2.0/8 - Network.md",
     "1 - Docker 2.0/7 - Docker Volume.md",
     "1 - Docker 2.0/6 - Multstage build.md",
@@ -178,14 +189,9 @@
     "imagens/arq-maquina-virtual.png",
     "imagens/arquitetura-network.png",
     "imagens/dockerfile-cheat.png",
-    "1 - Docker 2.0/Segurança/Trivy.md",
-    "1 - Docker 2.0/Segurança/Docker Scout.md",
-    "1 - Docker 2.0/Segurança/Distroless.md",
-    "1 - Docker 2.0/Segurança/Assinatura de Imagem.md",
     "1 - Docker 2.0/8 - Network/overlay.md",
     "1 - Docker 2.0/8 - Network/none.md",
     "1 - Docker 2.0/8 - Network/macvlan.md",
-    "1 - Docker 2.0/8 - Network/host.md",
     "imagens/docker-volume.png",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
