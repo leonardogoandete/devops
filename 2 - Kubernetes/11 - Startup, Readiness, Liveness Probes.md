@@ -8,7 +8,7 @@ Estes cuidados é muito importante ter, para usar o auto desempenho do Kubernete
 
 Para isso precisamos configurar 3 recursos fundamentais: 
 
-`Startup Probe`: utilizado em contêineres que iniciam de forma demorada, caso não esteja configurado o `Liveness` vai sempre reiniciar o pod, nunca estando pronto.
+`Startup Probe`: utilizado em contêineres que iniciam de forma demorada, caso não esteja configurado o `Liveness` vai sempre reiniciar o pod, nunca estando inicializado.
 
 `Readiness Probe`: ele verifica se o contêiner esta pronto para receber requisições. Geralmente quando processando algo e não pode atender requisições.
 Quando o `Liveness` está em condições, porem o `Readiness` estando com problema, ele simplesmente não vai ter um endpoind registrado no service.
