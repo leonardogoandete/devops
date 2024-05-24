@@ -1,4 +1,4 @@
-É errado o uso de variáveis de ambientes 
+É errado o uso de variáveis de ambientes, pois para alterarmos precisamos recriar os pods.
 
 
 **ConfigMap** é utilizado para guardar elementos de chave-valor, de forma que poderá ser utilizado nos arquivos de manifestos e setar as variáveis de ambientes.
@@ -184,4 +184,7 @@ env:
         key: QUARKUS_DATASOURCE_USERNAME
         name: minha-secret
 ```
+
+---
+### **ConfigMap e Secrets com linha de comando**
 
