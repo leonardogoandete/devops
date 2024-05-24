@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplica.md",
+                "file": "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplicação e dos Ambientes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplica.md",
+                "file": "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplicação e dos Ambientes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplica.md",
+                "file": "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplicação e dos Ambientes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplica.md"
+                "file": "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplicação e dos Ambientes.md"
               }
             }
           },
@@ -155,10 +155,10 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "5b4fa67817b92233",
+  "active": "b34c90496c53bb31",
   "lastOpenFiles": [
     "2 - Kubernetes/11 - Startup, Readiness, Liveness Probes.md",
-    "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplica.md",
+    "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplicação e dos Ambientes.md",
     "2 - Kubernetes/10 - Utilizando o Azure Contêiner Registry como repositório privado no Kubernetes.md",
     "2 - Kubernetes/9 - ConfigMap e Secret.md",
     "2 - Kubernetes/8 - Namespace.md",
