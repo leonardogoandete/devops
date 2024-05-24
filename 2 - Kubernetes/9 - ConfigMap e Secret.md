@@ -188,3 +188,26 @@ env:
 ---
 ### **ConfigMap e Secrets com linha de comando**
 
+Podemos criar configmap e secret via linha de comando e utilizar um arquivo, muito usando para certificados.
+
+Os exemplos abaixo pode ser utilizado com o secret no mesmo formato, ele vai guardar o valor codificado.
+
+Exemplo de ConfigMap:
+```bash
+kubectl create configmap literal-configmap --from-literal=PASSWORD_DB=aioefio56af
+```
+
+Exemplo com arquivo de valores:
+```yaml
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090']
+```
+
+comando:
+```bash
+kubectl create configmap file-configmap --from-filename=prometheus.yml
+```
+
+
