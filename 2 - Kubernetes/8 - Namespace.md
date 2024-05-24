@@ -6,10 +6,13 @@ O kubernetes vem com alguns namespace já existente por default.
 
 ![](../imagens/lista-namespace.png)
 
-`default` = é o namespace padrão, para objetos sem definição de namespace
-`kube-system` = para objetos de sistema do cluster kubernetes 
-`kube-public` = utilizado para acesso publico
-`kube-node-lease` = objetos associado a cada nó do cluster kubernetes, para verificar status e saúde dos nós.
+`default` é o namespace padrão, para objetos sem definição de namespace
+
+`kube-system` para objetos de sistema do cluster kubernetes 
+
+`kube-public` utilizado para acesso publico
+
+`kube-node-lease` objetos associado a cada nó do cluster kubernetes, para verificar status e saúde dos nós.
 
 Podemos criar `namespace`, por exemplo um namespace para banco de dados.
 ```bash
