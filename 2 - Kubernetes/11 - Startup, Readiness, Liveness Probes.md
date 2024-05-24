@@ -1,3 +1,5 @@
+Documentação: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#use-a-named-port
+
 Com o Kubernetes conseguimos ter escalabilidade e resiliência utilizando o `ReplicaSet`.
 
 Mas temos também temos recursos de `Self Healing`, o Kubernetes consegue auto recuperar algum processo caso de algum problema, basicamente ele restarta o contêiner dentro do pod.
@@ -14,6 +16,9 @@ Para isso precisamos configurar 3 recursos fundamentais:
 Quando o `Liveness` está em condições, porem o `Readiness` estando com problema, ele simplesmente não vai ter um endpoind registrado no service.
 
 `Liveness Probes`: utilizado valida a saúde do contêiner, ele irá sempre chamar o endpoint **`/health`** , caso a saúde não esteja saudável, o pod irá ficar reiniciando até ficar saudável.
+
+A Seguir veremos a configuração de cada probe.
+podemos utilizar varios tipos de teste em cada um deles, sendo eles o `httpGet`,`tcpSocket`,`exec`, `gRPC`.
 
 ---
 **Configurando Liveness Probe**
