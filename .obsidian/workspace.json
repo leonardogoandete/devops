@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "60f49739a9ab4235",
+        "id": "dc601db153db6e8b",
         "type": "tabs",
         "children": [
           {
-            "id": "8a98689123a706b7",
+            "id": "5c3248598006b5a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Kubernetes/6 - Services.md",
+                "file": "2 - Kubernetes/8 - Namespace.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Kubernetes/6 - Services.md",
+                "file": "2 - Kubernetes/8 - Namespace.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Kubernetes/6 - Services.md",
+                "file": "2 - Kubernetes/8 - Namespace.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Kubernetes/6 - Services.md"
+                "file": "2 - Kubernetes/8 - Namespace.md"
               }
             }
           },
@@ -155,10 +155,15 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "8a98689123a706b7",
+  "active": "5c3248598006b5a9",
   "lastOpenFiles": [
-    "imagens/exemplo-externalname.png",
+    "imagens/lista-namespace.png",
+    "2 - Kubernetes/8 - Namespace.md",
+    "Pasted image 20240523203712.png",
+    "2 - Kubernetes/7 - EndPoint.md",
+    "imagens/get-endpoints.png",
     "2 - Kubernetes/6 - Services.md",
+    "imagens/exemplo-externalname.png",
     "imagens/exemplo-lb-pending.png",
     "imagens/exemplo-loadbalancer-service.png",
     "imagens/exemplo-curl-nodeport.png",
@@ -166,7 +171,6 @@
     "2 - Kubernetes/8 - NodePort.md",
     "imagens/exemplo-nodeport.png",
     "imagens/exemplo-cadastro-service.png",
-    "imagens/service-clusterip.png",
     "2 - Kubernetes/5 - Deployment.md",
     "1 - Docker 2.0/Docker 2.0.md",
     "1 - Docker 2.0/8 - Network.md",
@@ -183,15 +187,11 @@
     "1 - Docker 2.0/4 - Arquitetura Docker.md",
     "1 - Docker 2.0/3 - Container sem Docker.md",
     "1 - Docker 2.0/1 - O que e um container.md",
-    "imagens/volume-bind.png",
-    "imagens/Untitled 7.png",
     "1 - Docker 2.0/Segurança/Trivy.md",
     "1 - Docker 2.0/Segurança/Docker Scout.md",
     "1 - Docker 2.0/Segurança/Distroless.md",
     "1 - Docker 2.0/Segurança/Assinatura de Imagem.md",
     "1 - Docker 2.0/8 - Network/overlay.md",
-    "1 - Docker 2.0/8 - Network/none.md",
-    "1 - Docker 2.0/8 - Network/macvlan.md",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
     "1 - Docker 2.0/Segurança",
