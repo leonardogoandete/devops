@@ -134,6 +134,7 @@ spec:
     requests.memory: "2Gi"
     limits.cpu: "3"
     limits.memory: "4Gi"
+    pods: "12"
 ```
 
 No exemplo acima, caso eu crie um deployment e queira varias replicas, o limite de CPU que todas as replicas somadas vai ter é 2 CPUs. 
