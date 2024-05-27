@@ -69,6 +69,18 @@ spec:
       image: nginx      
 ```
 
+Exemplo para validar conexão com banco de dados: 
+```yaml
+spec:
+  initContainers:
+    - name: teste-conexao
+      image: busybox:latest
+      command: ["sh","-c","until nslookup" "postgres-service; do echo Aguardando banco de dados!; sleep 2; done"]
+  containers:
+    - name: cadastro
+      image: leogoandete/cadastro:latest
+```
+
 Obs.: Caso não exista a url ele irá gerar erro e ficar restartando e o status `Init:Error`
 
 ![[../imagens/erro-init-container.png]]
