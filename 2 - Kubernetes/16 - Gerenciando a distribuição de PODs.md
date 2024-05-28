@@ -42,3 +42,14 @@ Essa definição de relacionamento de nodeSelector com o nó, pois caso o nó é
 
 #### **Node Affinity**
 
+Com o Affinity podemos aplicar o mesmo conceito do Node Selector, porem vamos ter preferencia por usar um label, se ele n'ao existir ele vai criar mesmo assim o deployment.
+
+A afinidade do nó é conceitualmente semelhante a `nodeSelector`, permitindo restringir em quais nós seu pod pode ser programado com base nos rótulos dos nós. Existem dois tipos de afinidade de nó:
+
+- `requiredDuringSchedulingIgnoredDuringExecution`: o agendador não pode agendar o pod a menos que a regra seja atendida. Funciona como `nodeSelector`, mas com uma sintaxe mais expressiva.
+- `preferredDuringSchedulingIgnoredDuringExecution`: o escalonador tenta encontrar um nó que atenda à regra. Se um nó correspondente não estiver disponível, o agendador ainda agendará o pod.
+
+Mais detalhes: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity
+
+---
+
