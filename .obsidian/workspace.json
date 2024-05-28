@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md.md"
+                "file": "README.md"
               }
             }
           },
@@ -178,10 +178,10 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "f93f89b2fce8290b",
+  "active": "b34c90496c53bb31",
   "lastOpenFiles": [
     "imagens/selecionar-pasta.png",
-    "README.md.md",
+    "README.md",
     "2 - Kubernetes/15 - Modos de Deploy.md",
     "2 - Kubernetes/14 - Lidando com volumes no Kubernetes.md",
     "2 - Kubernetes/13 - Ciclo de Vida de um POD.md",
