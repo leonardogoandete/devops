@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e019ddd0c8a82dc6",
+        "id": "dc601db153db6e8b",
         "type": "tabs",
         "children": [
           {
-            "id": "5b4fa67817b92233",
+            "id": "5c3248598006b5a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Kubernetes/13 - Ciclo de Vida de um POD.md",
+                "file": "2 - Kubernetes/8 - Namespace.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Kubernetes/13 - Ciclo de Vida de um POD.md",
+                "file": "2 - Kubernetes/8 - Namespace.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Kubernetes/13 - Ciclo de Vida de um POD.md",
+                "file": "2 - Kubernetes/8 - Namespace.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Kubernetes/13 - Ciclo de Vida de um POD.md"
+                "file": "2 - Kubernetes/8 - Namespace.md"
               }
             }
           },
@@ -155,27 +155,34 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "5b4fa67817b92233",
+  "active": "5c3248598006b5a9",
   "lastOpenFiles": [
-    "imagens/erro-init-container.png",
-    "2 - Kubernetes/13 - Ciclo de Vida de um POD.md",
     "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplicação e dos Ambientes.md",
-    "2 - Kubernetes/3 - POD.md",
-    "2 - Kubernetes/2 - Criando clusters.md",
-    "2 - Kubernetes/1 - Kubernetes.md",
-    "2 - Kubernetes/11 - Startup, Readiness, Liveness Probes.md",
-    "2 - Kubernetes/10 - Utilizando o Azure Contêiner Registry como repositório privado no Kubernetes.md",
+    "2 - Kubernetes/13 - Ciclo de Vida de um POD.md",
+    "2 - Kubernetes/14 - Lidando com volumes no Kubernetes.md",
+    "imagens/erro-init-container.png",
+    "1 - Docker 2.0/8 - Network/host.md",
+    "1 - Docker 2.0/8 - Network/bridge.md",
+    "1 - Docker 2.0/8 - Network/Domínio no container.md",
+    "1 - Docker 2.0/8 - Network.md",
     "2 - Kubernetes/9 - ConfigMap e Secret.md",
     "2 - Kubernetes/8 - Namespace.md",
-    "2 - Kubernetes/5 - Deployment.md",
-    "1 - Docker 2.0/Segurança/Trivy.md",
-    "1 - Docker 2.0/Segurança/Docker Scout.md",
-    "1 - Docker 2.0/Segurança/Distroless.md",
-    "1 - Docker 2.0/Segurança/Assinatura de Imagem.md",
-    "1 - Docker 2.0/Docker 2.0.md",
+    "2 - Kubernetes/11 - Startup, Readiness, Liveness Probes.md",
+    "2 - Kubernetes/10 - Utilizando o Azure Contêiner Registry como repositório privado no Kubernetes.md",
+    "imagens/lista-namespace.png",
+    "Pasted image 20240523203712.png",
+    "2 - Kubernetes/7 - EndPoint.md",
+    "imagens/get-endpoints.png",
     "2 - Kubernetes/6 - Services.md",
-    "imagens/service-clusterip.png",
-    "1 - Docker 2.0/8 - Network.md",
+    "imagens/exemplo-externalname.png",
+    "imagens/exemplo-lb-pending.png",
+    "imagens/exemplo-loadbalancer-service.png",
+    "imagens/exemplo-curl-nodeport.png",
+    "Pasted image 20240523192958.png",
+    "2 - Kubernetes/8 - NodePort.md",
+    "imagens/exemplo-nodeport.png",
+    "2 - Kubernetes/5 - Deployment.md",
+    "1 - Docker 2.0/Docker 2.0.md",
     "1 - Docker 2.0/7 - Docker Volume.md",
     "1 - Docker 2.0/6 - Multstage build.md",
     "1 - Docker 2.0/14 - Docker SDK.md",
@@ -184,14 +191,8 @@
     "1 - Docker 2.0/11 - Resiliência e Gerenciamento de Recursos.md",
     "1 - Docker 2.0/10 - Troubleshooting.md",
     "1 - Docker 2.0/9 - Compose.md",
-    "imagens/volume-bind.png",
-    "imagens/Untitled 7.png",
-    "imagens/Untitled 1 5.png",
-    "imagens/Untitled 1 3.png",
-    "imagens/arq-container.png",
-    "imagens/arq-maquina-virtual.png",
-    "imagens/arquitetura-network.png",
-    "imagens/dockerfile-cheat.png",
+    "1 - Docker 2.0/2 - VM vs Containers.md",
+    "1 - Docker 2.0/5 - Dockerfile.md",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
     "1 - Docker 2.0/Segurança",
