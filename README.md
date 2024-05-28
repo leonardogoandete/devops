@@ -7,6 +7,6 @@ Faça o clone do repositório https://github.com/leonardogoandete/devops e salve
 
 Após a instalação e o clone, abra o programa e na tela abaixo clique no botão `Abrir` ao lado do texto `Abrir pasta como um cofre`.
 
-![[imagens/selecionar-pasta.png]]
+![](imagens/selecionar-pasta.png)
 
 Selecione a pasta que foi clonada `devops` e pronto ; ) . 
