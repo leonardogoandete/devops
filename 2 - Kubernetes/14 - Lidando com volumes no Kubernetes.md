@@ -39,3 +39,5 @@ spec:
     requests:
       storage: 3Gi
 ```
+
+Este modo é ruim pois os volumes são montados em nós do kubernetes, então se ele for trocado ou excluído, ele será perdido.
