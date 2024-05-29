@@ -134,7 +134,9 @@ No exemplo do `Affinity`  queremos que nosso frontend fique sempre com um pod do
 No exemplo do `Antiaffinity` queremos que os pods com o frontend não fique junto com o redis. Entende-se que o `app-frontend` **NÃO** tem afinidade com o `redis`.
 
 ---
-#### **Taint**
+#### **Taint e Tolerations**
+
+**Taint**
 
 No taint podemos definir uma antiafinidade no nó, com isso ele define qual pod será executado ali. Ele define uma chave, valor e efeito.
 
@@ -156,4 +158,29 @@ Removendo taint de um nó:
 Adicionamos o sinal `-` ao final do tipo do tipo
 ```bash
 kubectl taint node <nome-do-no> <chave>=<valor>:<PreferNoSchedule|NoSchedule|NoExecute>- 
+```
+
+
+**Tolerations**
+
+_Tolerâncias_ são aplicadas em pods e permitem, mas não exigem, que os pods sejam alocados em nós com _taints_ correspondentes.
+
+Para uma tolerancia ser executada o nó precisa ter a mesma chave e um taint para ter efeito.
+
+Exemplo de `tolerations`:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-frontend
+spec:
+  containers:
+    - name: teste-front
+      image: leogoandete/front
+    tolerations:
+      - key: "minha-chave"
+        operator: "Equal"
+        value: "valor1"
+        effect: "NoExecute"
 ```
