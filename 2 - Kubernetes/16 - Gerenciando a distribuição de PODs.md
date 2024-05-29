@@ -183,4 +183,5 @@ spec:
         operator: "Equal"
         value: "valor1"
         effect: "NoExecute"
+        tolerationSeconds: 60 # Após 1 mim será reagendado.
 ```

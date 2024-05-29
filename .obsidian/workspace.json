@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Kubernetes/16 - Gerenciando a distribuição de PODs.md",
+                "file": "2 - Kubernetes/17 - Segurança.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Kubernetes/16 - Gerenciando a distribuição de PODs.md",
+                "file": "2 - Kubernetes/17 - Segurança.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Kubernetes/16 - Gerenciando a distribuição de PODs.md",
+                "file": "2 - Kubernetes/17 - Segurança.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Kubernetes/16 - Gerenciando a distribuição de PODs.md"
+                "file": "2 - Kubernetes/17 - Segurança.md"
               }
             }
           },
@@ -167,8 +167,9 @@
   },
   "active": "5b4fa67817b92233",
   "lastOpenFiles": [
-    "imagens/exemplo-affinity-antiaffinity.png",
     "2 - Kubernetes/16 - Gerenciando a distribuição de PODs.md",
+    "2 - Kubernetes/17 - Segurança.md",
+    "imagens/exemplo-affinity-antiaffinity.png",
     "2 - Kubernetes/1 - Kubernetes.md",
     "2 - Kubernetes/9 - ConfigMap e Secret.md",
     "2 - Kubernetes/15 - Modos de Deploy.md",
