@@ -123,9 +123,9 @@ spec:
 
 No tipo de `Affinity` e `Antiaffinity` podemos ter o *required* para definir obrigatoriedade e temos o *preferred*, nele temos um peso.
 
-No preferred ele vai tentar sempre colocar em nós distintos, caso tenha mais replicas que nós, ele vai repetir em alguns nós até atender o total de replicas definido.
+No *`preferred`* ele vai tentar sempre colocar em nós distintos, caso tenha mais replicas que nós, ele vai repetir em alguns nós até atender o total de replicas definido.
 
-No *required* caso o numero de replicas for maior que o numero de nós ele vai preencher de acordo com a quantidade de nós existente e o que sobrar ficara em `pending` até ter mais nós para distribuir.
+No *`required`* caso o numero de replicas for maior que o numero de nós ele vai preencher de acordo com a quantidade de nós existente e o que sobrar ficara em `pending` até ter mais nós para distribuir.
 
 ![](exemplo-affinity-antiaffinity.png)
 
@@ -133,3 +133,27 @@ No exemplo do `Affinity`  queremos que nosso frontend fique sempre com um pod do
 
 No exemplo do `Antiaffinity` queremos que os pods com o frontend não fique junto com o redis. Entende-se que o `app-frontend` **NÃO** tem afinidade com o `redis`.
 
+---
+#### **Taint**
+
+No taint podemos definir uma antiafinidade no nó, com isso ele define qual pod será executado ali. Ele define uma chave, valor e efeito.
+
+Podemos utilizar três tipos de efeitos:
+`PreferNoSchedule` para que o pod não seja preferencialmente agendado dentro do nó.
+
+`NoSchedule` para que ele não seja agendado de forma nenhuma. 
+
+`NoExecute` não pode ser executado. Ele é utilizado pois eu posso definir um taint depois que o pod foi agendado no nó, ele pode acabar ficando no nó e eu quero que não seja executado.
+
+Para nos auxiliar com os `taint` temos um tolerations para colocar um exceção e o taint não passa a valer no pod definido.
+
+Adicionando taint em um nó:
+```bash
+kubectl taint node <nome-do-no> <chave>=<valor>:<PreferNoSchedule|NoSchedule|NoExecute>
+```
+
+Removendo taint de um nó:
+Adicionamos o sinal `-` ao final do tipo do tipo
+```bash
+kubectl taint node <nome-do-no> <chave>=<valor>:<PreferNoSchedule|NoSchedule|NoExecute>- 
+```
