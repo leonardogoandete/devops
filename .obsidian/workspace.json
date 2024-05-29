@@ -18,6 +18,16 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a8ceb8672bab41df",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "imagens/exemplo-affinity-antiaffinity.png"
+              }
+            }
           }
         ]
       }

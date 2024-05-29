@@ -127,7 +127,7 @@ No *`preferred`* ele vai tentar sempre colocar em nós distintos, caso tenha mai
 
 No *`required`* caso o numero de replicas for maior que o numero de nós ele vai preencher de acordo com a quantidade de nós existente e o que sobrar ficara em `pending` até ter mais nós para distribuir.
 
-![](exemplo-affinity-antiaffinity.png)
+![](../imagens/exemplo-affinity-antiaffinity.png)
 
 No exemplo do `Affinity`  queremos que nosso frontend fique sempre com um pod do redis no mesmo nó, reduzindo a latência. Entende-se que o `app-frontend` tem afinidade com o `redis`.
 
