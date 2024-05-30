@@ -22,3 +22,5 @@ https://kubernetes.io/docs/tasks/administer-cluster/network-policy-provider/
 
 #### **NetworkPolicy**
 
+Os PODs por padrão se comunicam sem nenhuma restrição, porem precisamos limitar essas conexões, para fazer essa garantia de controle de comunicação é utilizado o Network Policy.
+
