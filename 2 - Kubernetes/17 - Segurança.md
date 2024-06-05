@@ -78,3 +78,7 @@ https://kubernetes.io/docs/concepts/services-networking/network-policies/
 
 #### **ServiceAccount e RBAC**
 
+Assim como conectamos nós acessamos o cluster Kubernetes, temos os nossos acessos e permissões. Os PODs também utilizam da mesma forma, porem ele não utiliza a nossa conta, ele utiliza uma conta própria que é chamada de `Service Account` e ele também necessita de permissões. Geralmente quando se precisa de adição de alguns acessos. 
+
+
+É uma boa prática, criamos uma `ServiceAccount` com o minimo de permissão possível, garantindo segurança dentro do cluster, isto precisa ser muito bem refinado, e para isso existe o `RBAC`, é uma regra para o cluster baseado em `Roles` e `Role Bindings`, a `Role` tem acessos e o ***Binding*** é o que liga uma `Role` a uma `Service Account`.
