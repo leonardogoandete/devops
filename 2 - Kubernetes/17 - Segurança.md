@@ -82,3 +82,68 @@ Assim como conectamos nós acessamos o cluster Kubernetes, temos os nossos acess
 
 
 É uma boa prática, criamos uma `ServiceAccount` com o minimo de permissão possível, garantindo segurança dentro do cluster, isto precisa ser muito bem refinado, e para isso existe o `RBAC`, é uma regra para o cluster baseado em `Roles` e `Role Bindings`, a `Role` tem acessos e o ***Binding*** é o que liga uma `Role` a uma `Service Account`.
+
+Neste projeto temos uma API que exibe a listagem de Deployments, PODs e Service:
+https://github.com/KubeDev/k8s-dashboard-csharp
+
+Para isso precisamos criar as permissões necessárias.
+
+Criar uma conta de usuário para a aplicação:
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: user-dashboard
+```
+
+Criar as roles necessarias:
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: dashboard-reader
+rules:
+- apiGroups: [""]
+  resources: ["namespaces", "pods", "services"]
+  verbs: ["get", "watch", "list"]
+```
+
+Por fim precisamos vincular a `Role` com a `ServiceAccount` para isso precisamos do `RoleBinding`:
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: dashboard-reader-bind
+subjects:
+- kind: ServiceAccount
+  name: user-dashboard
+  namespace: default
+roleRef:
+  kind: ClusterRole
+  name: dashboard-reader
+  apiGroup: rbac.authorization.k8s.io  
+```
+
+Após é necessário vincular a `serviceAccount` no `Deployment` na sessão `spec` do template:
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-dashboard-deploy
+spec:  
+  selector:
+    matchLabels:
+      app: k8s-dashboard
+  template:
+    metadata:
+      labels:
+        app: k8s-dashboard
+    spec:
+      serviceAccount: user-dashboard
+      containers:
+      - name: k8s-dashboard
+        image: kubedevio/k8s-dashboard
+        imagePullPolicy: Always
+```
+
