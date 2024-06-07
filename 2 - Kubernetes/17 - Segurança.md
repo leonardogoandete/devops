@@ -147,3 +147,61 @@ spec:
         imagePullPolicy: Always
 ```
 
+---
+#### **Ingress Controller**
+
+O Ingress controller nos auxilia a realizar a exposição de nossos serviços executados no cluster. Se fossemos usar o tipo LoadBalancer eu teria que ter um IP para cada serviço o que geraria muito custo, para resolver isso temos o Ingress que utiliza uma unica entrada e direciona para os serviços internos do cluster de acordo com as regras.
+
+Exemplo com IP externo para cada serviço:
+Nesse exemplo eu teria que comprar um nome de domínio para cada serviço.
+
+![](../imagens/exemplo-sem-ingress.png)
+
+Exemplo usando Ingress:
+Neste caso compramos somente um domínio e pode ser utilizado a estrategia de wildcard.
+
+O Ingress NGINX tera um service do tipo LoadBalancer.
+O Ingress Controller sempre consulta um Ingress para ver para quem será redirecionado.
+Podemos ter mais de um Ingress Controller no cluster.
+
+Exemplo: ServicoX.meudominio.com
+         \*.meudominio.com
+
+![](../imagens/exemplo-com-ingress.png)
+
+Para configurar um Ingress Controle, primeiro precisamos intalar ele no cluster, ha varios tipos de Ingress Controller como o NGINX, Kong, HAProxxy. 
+
+Neste exemplo vamos usar o NGINX, para instalar basta seguir a documentação https://kubernetes.github.io/ingress-nginx/deploy/ , tomar cuidado pois há a documentação do NGINX e a documentação do Kubernetes.
+
+Vamos usar a opção de Bare Metal por ser um cluster local: 
+
+Fornecido na documentação do Kubernetes para NGINX:
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/baremetal/deploy.yaml
+```
+
+Fornecido na documentação do Kind:
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+```
+
+Criando um Ingress para o serviço baseado em path:
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-simples
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: foo-service
+            port:
+              number: 8080
+```
+
