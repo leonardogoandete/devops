@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e019ddd0c8a82dc6",
+        "id": "9cb5f3a3f561d817",
         "type": "tabs",
         "children": [
           {
-            "id": "5b4fa67817b92233",
+            "id": "69c50f153be8d5f5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -155,10 +155,12 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "5b4fa67817b92233",
+  "active": "69c50f153be8d5f5",
   "lastOpenFiles": [
-    "imagens/instalacao-helm-ingress.png",
+    "imagens/primeiro-helm.png",
     "2 - Kubernetes/18 - Helm.md",
+    "Pasted.md",
+    "imagens/instalacao-helm-ingress.png",
     "2 - Kubernetes/17 - Segurança.md",
     "imagens/exemplo-com-ingress.png",
     "imagens/exemplo-sem-ingress.png",
@@ -188,10 +190,8 @@
     "imagens/service-clusterip.png",
     "1 - Docker 2.0/8 - Network.md",
     "1 - Docker 2.0/7 - Docker Volume.md",
-    "1 - Docker 2.0/6 - Multstage build.md",
     "imagens/volume-bind.png",
     "imagens/Untitled 7.png",
-    "imagens/Untitled 1 5.png",
     "imagens",
     "meu_notion/Docker 2.0/Untitled.canvas",
     "1 - Docker 2.0/Segurança",

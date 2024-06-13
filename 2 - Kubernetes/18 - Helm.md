@@ -82,9 +82,34 @@ release <nome-releasse> uninstalled
 Atualizando uma release:
 ```bash
 helm upgrade <nome-release> ingress-nginx/ingress-nginx --values <caminho-do-arquivo>
+
+# Em um namespace especifico:
+helm upgrade <nome-release> ingress-nginx/ingress-nginx --values <caminho-do-arquivo> --namespace <nome-namespace>
 ```
 
 Visualizar histórico de uma release: 
 ```
 helm history <nome-release>
+
+# Em um namespace especifico:
+helm history <nome-release> --namespace <nome-namespace>
 ```
+
+Podemos fazer um rollback, ou seja voltar a versão anterior:
+```bash
+helm rollback <nome-release>
+
+# Em um namespace especifico:
+helm rollback <nome-release> --namespace <nome-namespace>
+```
+
+### **Primeiro Helm Chart**
+
+Para criarmos um template de Helm, executamos o comando 
+```bash
+helm create <nome-chart>
+```
+
+Ele irá criar uma pasta com o nome definido no `create`:
+
+![](../imagens/primeiro-helm.png)
