@@ -79,3 +79,7 @@ Output:
 release <nome-releasse> uninstalled
 ```
 
+Atualizando uma release:
+```bash
+helm upgrade <nome-release> ingress-nginx/ingress-nginx --values <caminho-do-arquivo>
+```
