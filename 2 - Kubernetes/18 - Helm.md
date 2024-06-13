@@ -83,3 +83,8 @@ Atualizando uma release:
 ```bash
 helm upgrade <nome-release> ingress-nginx/ingress-nginx --values <caminho-do-arquivo>
 ```
+
+Visualizar histórico de uma release: 
+```
+helm history <nome-release>
+```
