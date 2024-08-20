@@ -157,8 +157,9 @@
   },
   "active": "69c50f153be8d5f5",
   "lastOpenFiles": [
-    "imagens/primeiro-helm.png",
+    "2 - Kubernetes/5 - Deployment.md",
     "2 - Kubernetes/18 - Helm.md",
+    "imagens/primeiro-helm.png",
     "Pasted.md",
     "imagens/instalacao-helm-ingress.png",
     "2 - Kubernetes/17 - Segurança.md",
@@ -180,7 +181,6 @@
     "2 - Kubernetes/11 - Startup, Readiness, Liveness Probes.md",
     "2 - Kubernetes/10 - Utilizando o Azure Contêiner Registry como repositório privado no Kubernetes.md",
     "2 - Kubernetes/8 - Namespace.md",
-    "2 - Kubernetes/5 - Deployment.md",
     "1 - Docker 2.0/Segurança/Trivy.md",
     "1 - Docker 2.0/Segurança/Docker Scout.md",
     "1 - Docker 2.0/Segurança/Distroless.md",

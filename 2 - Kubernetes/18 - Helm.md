@@ -113,3 +113,62 @@ helm create <nome-chart>
 Ele irá criar uma pasta com o nome definido no `create`:
 
 ![](../imagens/primeiro-helm.png)
+
+Criando um template de mongo usando helm:
+
+Criar o arquivo abaixo com o nome desejado porem ele deverá estar dentro da pasta "Templates".
+Pode ser criado vários arquivos separados, para criar os objetos no cluster, como service, hpa entre outros.
+
+``` yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-mongodb-deployment
+spec:
+  selector:
+    matchLabels:
+      # Tem que ser o mesmo valor declarado no POD.
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-container
+          image: mongodb:{{ .Values.mongodb.tag }}
+          ports:
+          - containerPort: 27017
+          env:
+          - name: QUARKUS_DATASOURCE_USERNAME
+            value: {{ .Values.mongodb.credenciais.userName }}
+          - name: QUARKUS_DATASOURCE_PASSWORD
+            value: {{ .Values.mongodb.credenciais.userPassword }}
+```
+
+Adicionar no arquivo `values.yml` os valores.
+
+``` yaml
+mongodb:
+  tag: 4.2.8
+  credenciais:
+    userName: "meu_usuario"
+    userPassword: "minha_senha"
+```
+
+Após os ajustes acima para validarmos se será criado os objetos corretamente sem executar no cluster pode ser usado o comando abaixo:
+
+```bash
+helm install <nome-desejado> ./<diretorio-templates> --dry-run --debug
+
+#Com output para um arquivo
+helm install <nome-desejado> ./<diretorio-templates> --dry-run --debug > arquivo.yml
+```
+
+Para instalar podemos rodar o comando:
+Lembrando que o deployment ficara com o nome passado que foi definido \<nome-desejado> 
+
+```bash
+helm install <nome-desejado> <diretorio-helm> 
+```
+
