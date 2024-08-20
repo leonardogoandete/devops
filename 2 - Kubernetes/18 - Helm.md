@@ -114,7 +114,7 @@ Ele irá criar uma pasta com o nome definido no `create`:
 
 ![](../imagens/primeiro-helm.png)
 
-Criando um template de mongo usando helm:
+#### **Criando um template de mongo usando helm:**
 
 Criar o arquivo abaixo com o nome desejado porem ele deverá estar dentro da pasta "Templates".
 Pode ser criado vários arquivos separados, para criar os objetos no cluster, como service, hpa entre outros.
@@ -172,3 +172,6 @@ Lembrando que o deployment ficara com o nome passado que foi definido \<nome-des
 helm install <nome-desejado> <diretorio-helm> 
 ```
 
+#### **Estrutura if/else**
+
+Podemos utilizar operadores condicionais no template.
