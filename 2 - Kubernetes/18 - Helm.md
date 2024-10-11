@@ -35,7 +35,7 @@ Removendo repositórios:
 helm repo remove <nome-repositorio>
 ```
 
-
+---
 ### ** Instalando aplicações**
 
 Instalando o helm para instalar o nginx ingress controller.
@@ -103,7 +103,10 @@ helm rollback <nome-release>
 helm rollback <nome-release> --namespace <nome-namespace>
 ```
 
+---
 ### **Primeiro Helm Chart**
+
+Exemplos de Charts: https://github.com/bitnami/charts/tree/main/bitnami
 
 Para criarmos um template de Helm, executamos o comando 
 ```bash
@@ -114,6 +117,7 @@ Ele irá criar uma pasta com o nome definido no `create`:
 
 ![](../imagens/primeiro-helm.png)
 
+---
 #### **Criando um template de mongo usando helm:**
 
 Criar o arquivo abaixo com o nome desejado porem ele deverá estar dentro da pasta "Templates".
@@ -172,6 +176,139 @@ Lembrando que o deployment ficara com o nome passado que foi definido \<nome-des
 helm install <nome-desejado> <diretorio-helm> 
 ```
 
+---
 #### **Estrutura if/else**
 
 Podemos utilizar operadores condicionais no template.
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .release.Name }}-mongodb-secret
+type: Opaque
+data:
+  MONGO_INITDB_ROOT_USERNAME: {{ .Values.mongodb.credentials.userName | b64enc | quote }}
+  MONGO_INITDB_ROOT_PASSWORD: {{ .Values.mongodb.credentials.userPassword | b64enc | quote }}
+```
+
+Por exemplo se já existir a secret acima, podemos ignorar a criação de uma secret ou definir uma escolha em um deployment por exemplo.
+
+Para usar a estrutura é básica conforme exemplo abaixo:
+Lembrando que esse valor tem que estar cadastrado no chart `.Values.mongodb.existSecret`
+
+```yaml
+{{- if empty .Values.mongodb.existSecret }}
+ # Se a secret não existir executa o que tem no bloco
+ - secretRef:
+     name: {{ .Release.Name }}--mongodb-secret
+{{- else }}
+  # Se a secret exitir utiliza ela
+  - secretRef:
+     name: {{ .Release.Name }}--mongodb-secret
+{{- end }}
+```
+
+Posso utilizar na criação de objeto também por exemplo se já existir a secret então não preciso criar, basta fazer como no exemplo abaixo:
+
+Lembrando que esse valor tem que estar cadastrado no chart `.Values.mongodb.existSecret`
+
+Arquivo `values.yml`:
+```yaml
+mongodb:
+  tag: 4.2.8
+  credentials:
+    userName: mongouser
+    userPassword: mongopass
+  databaseName: admin
+```
+
+```yaml
+{{- if empty .Values.mongodb.existSecret }}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Release.Name }}-mongodb-secret
+type: Opaque
+data:
+  MONGO_INIT_ROOT_USERNAME: {{ .Values.mongodb.credentials.userName | b64enc | quote }}
+  MONGO_INIT_ROOT_PASSWORD: {{ .Values.mongodb.credentials.userPassword | b64enc | quote }}
+{{- end }}
+```
+
+---
+#### **Estrutura loop**
+
+Para usar estrutura de repetição podemos configurar conforme exemplo abaixo em um Ingress.
+
+Arquivo values.yml
+```yaml
+api:
+  image: nginx
+  serviceType: ClusterIP
+  ingress:
+    - meudominio.com
+    - outro-dominio.com.br
+```
+
+
+```yaml
+apiVersion: networking.k8s.io/v1/beta1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-api-ingress
+spec:
+  rules:
+  {{- range .Values.api.ingress }}
+  - host: {{ . }} # Usa o contexto do for
+    http:
+      paths:
+      - backend:
+		  servicePort: 80
+          serviceName: {{ $.Release.Name }}-api-service #Pega fora do contexto do for
+  {{- end }}        
+```
+
+---
+#### **Named Templates**
+
+Utilizado bastante em valores onde há muita repetição de valores por exemplo o nome:
+`{{ .Release.Name }}-mongo-service` ou seja podemos criar um template para definir esse valor e evitar erros por repetição de valor.
+
+Para criar esses templates auxiliares, precisamos criar um arquivo sempre com o underline na frente do nome do arquivo exemplo `_meutemplate.tpl`.
+
+Arquivo `_meutemplate.tpl`:
+```tpl
+{{/* Nome do configmap */}}
+{{- define "mongodb.serviceName" -}}
+{{ .Release.Name }}-mongo-service
+{{ - end -}}
+```
+
+Utilizando no template.
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-api-configmap
+data:
+  Mongo__Host: {{ template "mongodb.ServiceName" . }}
+  Mongo__DataBase: {{ .Values.mongodb.databaseName }}
+```
+
+---
+
+#### **Dependência de Charts**
+
+Quando utilizamos um Chart de uma api, msa e se me a api precisar de um banco, e já exista um Chart de um banco já criado, podemos reaproveitar toda a estrutura dele.
+
+Primeiro precisamos definir que o nosso Chart terá uma dependência, para isso editaremos o arquivo `Chart.yml`
+
+```yaml
+...
+dependencies:
+  - name: mongodb
+    version: "8.0.1"
+    repository: ""
+
+```

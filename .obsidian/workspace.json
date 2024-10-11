@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9cb5f3a3f561d817",
+        "id": "f02164456ded4da8",
         "type": "tabs",
         "children": [
           {
-            "id": "69c50f153be8d5f5",
+            "id": "a525c767a6d0ea18",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 267.5
   },
   "right": {
     "id": "2a1975e0fec0bb47",
@@ -155,10 +155,19 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "69c50f153be8d5f5",
+  "active": "a525c767a6d0ea18",
   "lastOpenFiles": [
-    "2 - Kubernetes/5 - Deployment.md",
     "2 - Kubernetes/18 - Helm.md",
+    "1 - Docker 2.0/9 - Compose.md",
+    "1 - Docker 2.0/6 - Multstage build.md",
+    "1 - Docker 2.0/7 - Docker Volume.md",
+    "1 - Docker 2.0/1 - O que e um container.md",
+    "1 - Docker 2.0/12 - Segurança.md",
+    "1 - Docker 2.0/Segurança/Trivy.md",
+    "1 - Docker 2.0/Docker 2.0.md",
+    "2 - Kubernetes/7 - EndPoint.md",
+    "2 - Kubernetes/6 - Services.md",
+    "2 - Kubernetes/5 - Deployment.md",
     "imagens/primeiro-helm.png",
     "Pasted.md",
     "imagens/instalacao-helm-ingress.png",
@@ -181,15 +190,7 @@
     "2 - Kubernetes/11 - Startup, Readiness, Liveness Probes.md",
     "2 - Kubernetes/10 - Utilizando o Azure Contêiner Registry como repositório privado no Kubernetes.md",
     "2 - Kubernetes/8 - Namespace.md",
-    "1 - Docker 2.0/Segurança/Trivy.md",
-    "1 - Docker 2.0/Segurança/Docker Scout.md",
-    "1 - Docker 2.0/Segurança/Distroless.md",
-    "1 - Docker 2.0/Segurança/Assinatura de Imagem.md",
-    "1 - Docker 2.0/Docker 2.0.md",
-    "2 - Kubernetes/6 - Services.md",
     "imagens/service-clusterip.png",
-    "1 - Docker 2.0/8 - Network.md",
-    "1 - Docker 2.0/7 - Docker Volume.md",
     "imagens/volume-bind.png",
     "imagens/Untitled 7.png",
     "imagens",
