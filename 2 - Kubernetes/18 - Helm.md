@@ -300,7 +300,7 @@ data:
 
 #### **Dependência de Charts**
 
-Quando utilizamos um Chart de uma api, msa e se me a api precisar de um banco, e já exista um Chart de um banco já criado, podemos reaproveitar toda a estrutura dele.
+Quando utilizamos um Chart de uma api, mas e se minha api precisar de um banco, e já exista um Chart de um banco já criado, podemos reaproveitar toda a estrutura dele.
 
 Primeiro precisamos definir que o nosso Chart terá uma dependência, para isso editaremos o arquivo `Chart.yml`
 
@@ -309,6 +309,27 @@ Primeiro precisamos definir que o nosso Chart terá uma dependência, para isso 
 dependencies:
   - name: mongodb
     version: "8.0.1"
-    repository: ""
+    repository: "https://charts.bitnami.com/bitnami"
+```
 
+Para declarar os valores dessa dependencia, precisamos ajustar no arquivo `values.yaml` e utilizar o mesmo nome conforme abaixo:
+
+```yaml
+mongodb:
+  auth:
+    rootPassword: mongoRoot
+    username:mongouser
+    password: mongopwd
+    database: produto
+  persistence:
+    enable: false
+```
+
+Obs.: Verificar os valores na documentação do chart.
+Exemplo do mongo: https://github.com/bitnami/charts/tree/main/bitnami/mongodb
+
+Apos os passos anteriores basta configurar o restante dos helm para a api utilizar o novo mongo e depois precisamos executar um comando para o helm pegar as dependências necessárias:
+
+```bash
+helm dependency build
 ```

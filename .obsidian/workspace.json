@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f02164456ded4da8",
+        "id": "9cb5f3a3f561d817",
         "type": "tabs",
         "children": [
           {
-            "id": "a525c767a6d0ea18",
+            "id": "69c50f153be8d5f5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5
+    "width": 300
   },
   "right": {
     "id": "2a1975e0fec0bb47",
@@ -155,19 +155,13 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "a525c767a6d0ea18",
+  "active": "69c50f153be8d5f5",
   "lastOpenFiles": [
+    "2 - Kubernetes/2 - Criando clusters.md",
+    "2 - Kubernetes/1 - Kubernetes.md",
+    "2 - Kubernetes/4 - ReplicaSet.md",
+    "Ansible.md",
     "2 - Kubernetes/18 - Helm.md",
-    "1 - Docker 2.0/9 - Compose.md",
-    "1 - Docker 2.0/6 - Multstage build.md",
-    "1 - Docker 2.0/7 - Docker Volume.md",
-    "1 - Docker 2.0/1 - O que e um container.md",
-    "1 - Docker 2.0/12 - Segurança.md",
-    "1 - Docker 2.0/Segurança/Trivy.md",
-    "1 - Docker 2.0/Docker 2.0.md",
-    "2 - Kubernetes/7 - EndPoint.md",
-    "2 - Kubernetes/6 - Services.md",
-    "2 - Kubernetes/5 - Deployment.md",
     "imagens/primeiro-helm.png",
     "Pasted.md",
     "imagens/instalacao-helm-ingress.png",
@@ -177,7 +171,6 @@
     "imagens/exemplo-affinity-antiaffinity.png",
     "2 - Kubernetes/3 - POD.md",
     "2 - Kubernetes/16 - Gerenciando a distribuição de PODs.md",
-    "2 - Kubernetes/1 - Kubernetes.md",
     "2 - Kubernetes/9 - ConfigMap e Secret.md",
     "2 - Kubernetes/15 - Modos de Deploy.md",
     "README.md",
@@ -186,11 +179,18 @@
     "2 - Kubernetes/13 - Ciclo de Vida de um POD.md",
     "imagens/erro-init-container.png",
     "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplicação e dos Ambientes.md",
-    "2 - Kubernetes/2 - Criando clusters.md",
     "2 - Kubernetes/11 - Startup, Readiness, Liveness Probes.md",
     "2 - Kubernetes/10 - Utilizando o Azure Contêiner Registry como repositório privado no Kubernetes.md",
     "2 - Kubernetes/8 - Namespace.md",
+    "2 - Kubernetes/5 - Deployment.md",
+    "1 - Docker 2.0/Segurança/Trivy.md",
+    "1 - Docker 2.0/Segurança/Docker Scout.md",
+    "1 - Docker 2.0/Segurança/Distroless.md",
+    "1 - Docker 2.0/Segurança/Assinatura de Imagem.md",
+    "1 - Docker 2.0/Docker 2.0.md",
+    "2 - Kubernetes/6 - Services.md",
     "imagens/service-clusterip.png",
+    "1 - Docker 2.0/8 - Network.md",
     "imagens/volume-bind.png",
     "imagens/Untitled 7.png",
     "imagens",
