@@ -28,11 +28,69 @@ helm install my-traefik traefik/traefik --version 32.1.1
 
 2 - Elementos para cria a rota no trefik, 
     
-- Endpoint: podemos configurar um tipo de endpoint especifico, pode ser do tipo http, udp, tcp.
+- Endpoint: podemos configurar um tipo de endpoint especifico, pode ser do tipo web, http, udp, tcp.
 
-- Router:
+- Router: Conecta o `endpoint` aos services e tratamento das requisições, ele que adiciona os `middlewares`
 
-- Middleware:
+- Middleware: Tratamentos aplicado ao `router` antes de encaminhar para o services, exemplo algum header.
 
-- Service:
+- Service: O serviço em execução.
+
+---
+
+### Configurando a rota
+1 - Primeiro precisamos criar um ingress route que representa a rota:
+
+```yaml
+apiVersion: traefik.contanio.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingressroute
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`meusite.com`)
+    kind: Rule
+    services:
+    - name: nginx-service
+      port: 80
+```
+
+Podemos validar usando o curl `curl http://meusite.com` se retornar a pagina do nginx, foi configurado com sucesso.
+
+### Configurando Middleware
+1 - Criar um middleware.
+
+```yaml
+apiVersion: traefik.contanio.us/v1alpha1
+kind: Middleware
+metadata:
+  name: ratelimit
+spec:
+  rateLimit:
+    average: 5
+    period: 1s
+```
+
+Aplicar o middleware com o `kubectl apply -f` e depois vincular no `route`:
+
+```yaml
+apiVersion: traefik.contanio.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingressroute
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`meusite.com`)
+    kind: Rule
+    services:
+    - name: nginx-service
+      port: 80
+    middleware:
+      - name: rateLimit
+```
+
 
