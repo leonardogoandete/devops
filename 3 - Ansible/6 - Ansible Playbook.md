@@ -206,4 +206,17 @@ Alteração no playbook:
         msg: "O nome é {{ nome }} e a idade é {{ idade }}"
 ```
 
+## Variaveis em linha de comando
+
+Para passar variáveis via linha de comando basta utilizar o parâmetro `--extra-vars` ou `-e`.
+
+```bash
+ansible-playbook -i hosts playbook.yaml --extra-vars "nome=Leonardo idade=1000"
+```
+
+Podemos também passar um arquivo com as variáveis utilizando o parâmetro `--extra-vars` ou `-e`.
+
+```bash
+ansible-playbook -i hosts playbook.yaml --extra-vars "@vars.yaml"
+```
 
