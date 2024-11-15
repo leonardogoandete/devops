@@ -20,65 +20,20 @@ Para usar um registro, você precisa adicionar a variável `register` ao final d
         msg: "{{ resultado }}"
 ```
 
-## Exemplo prático completo 
+## Usando Register em outros módulos
 
-O exemplo a seguir instala o pacote `whois`, cria um usuário, gera uma senha criptografada, cria um diretório `.ssh` e copia uma chave pública para o usuário criado.
+Você pode usar o registro em qualquer módulo Ansible. Por exemplo, você pode usar o registro com o módulo `copy` para armazenar o resultado de uma cópia de arquivo em uma variável.
 
-Arquivo `playbook.yaml`:
 ```yaml
----
-- name: Criação de um usuario
-  hosts: all
-  remote_user: root
-  vars_files:
-    - vars.yaml
+- name: Copiar um arquivo
+  hosts: localhost
   tasks:
-    - name: Instalar o pacote whois
-      ansible.builtin.apt:
-        name: whois
-        state: present
-        update_cache: true
-
-    - name: Gerar senha criptografada
-      ansible.builtin.shell: "mkpasswd --method=SHA-512 --rounds=4096 {{ senha }}"
-      register: senha_criptografada
-
-    - name: Criar o usuario
-      ansible.builtin.user:
-        name: "{{ nome }}"
-        password: "{{ senha_criptografada.stdout }}"
-        state: present
-        shell: /bin/bash
-        groups: sudo
-        append: yes
-    - name: Criar o diretorio ssh 
-      ansible.builtin.file:
-        path: "/home/{{ nome }}/.ssh"
-        state: directory
-        owner: "{{ nome }}"
-        group: "{{ nome }}"
-        recurse: true
-    - name: Copiar a chave publica
+    - name: Copiar um arquivo
       ansible.builtin.copy:
-        src: "/home/leo/.ssh/aula_ansible.pub"
-        dest: "/home/{{ nome }}/.ssh/authorized_keys"
-```
-
-Arquivo `vars.yaml`:
-```yaml
----
-nome: leo
-senha: "123456"
-```
-
-Arquivo `hosts`:
-```ini
-[ansible] # Grupo ansible
-10.253.179.58
-10.253.179.87
-10.253.179.228
-10.253.179.229
-
-[ansible:vars] # Variaveis para o grupo ansible
-ansible_ssh_private_key_file=~/.ssh/aula_ansible
+        src: /etc/hosts
+        dest: /tmp/hosts
+      register: resultado
+    - name: Exibir o resultado
+      ansible.builtin.debug:
+        msg: "{{ resultado }}"
 ```
