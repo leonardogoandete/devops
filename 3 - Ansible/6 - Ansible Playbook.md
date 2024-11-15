@@ -11,7 +11,7 @@ Resumindo:
 
 1. Definir o inventário
 
-```.ini
+```ini
 [nginx]
 192.168.0.19
 192.168.0.20
