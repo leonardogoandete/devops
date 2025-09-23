@@ -59,11 +59,13 @@ O Kubernetes possui um recurso de self-healing que permite que ele monitore o es
 
 Os probes são verificações periódicas que o Kubernetes realiza para determinar se um container está saudável e pronto para receber tráfego. Existem três tipos principais de probes:
 
+- **Startup Probe**: Verifica se a aplicação dentro do container iniciou corretamente. Se a startup probe falhar, o Kubernetes reiniciará o container. Isso é útil para aplicações que podem levar um tempo significativo para iniciar, garantindo que o Kubernetes não considere o container como falho antes que ele tenha tido a chance de iniciar completamente.
+
+O Liveness e Readiness só são aplicados após a Startup Probe ser bem-sucedida.
+
 - **Liveness Probe**: Verifica se o container está em execução. Se a liveness probe falhar, o Kubernetes reiniciará o container. Isso é útil para detectar e corrigir situações em que um container está em um estado de erro, mas ainda está em execução.
 
-- **Readiness Probe**: Verifica se o container está pronto para receber tráfego. Se a readiness probe falhar, o Kubernetes removerá o pod do serviço até que ele esteja pronto novamente. Isso é útil para garantir que o tráfego não seja enviado para um container que ainda não está pronto para processá-lo.
-
-- **Startup Probe**: Verifica se o container iniciou corretamente. Se a startup probe falhar, o Kubernetes reiniciará o container. Isso é útil para containers que podem levar um tempo significativo para iniciar.
+- **Readiness Probe**: Verifica se o container está pronto para receber tráfego. Se a readiness probe falhar, o Kubernetes removerá o pod do serviço até que ele esteja pronto novamente. Isso é útil para garantir que o tráfego não seja enviado para um container que ainda não está pronto para processá-lo. O container pode estar em execução, mas não estar pronto para aceitar solicitações.
 
 Os probes podem ser configurados usando diferentes métodos, como HTTP GET, TCP Socket ou execução de comandos. Aqui está um exemplo de configuração de liveness e readiness probes em um manifesto de pod:
 
@@ -139,3 +141,9 @@ spec:
         periodSeconds: 10
 ``` 
 
+Podemos refinar ainda mais as probes com os seguintes parametros:
+- **initialDelaySeconds**: Tempo em segundos que o Kubernetes espera antes de iniciar a primeira verificação da probe. Isso é útil para dar tempo ao container para iniciar antes de começar a verificar sua saúde.
+- **periodSeconds**: Intervalo em segundos entre as verificações da probe. Isso define com que frequência o Kubernetes verifica a saúde do container.
+- **timeoutSeconds**: Tempo em segundos que o Kubernetes espera por uma resposta da probe antes de considerar que ela falhou. Isso é útil para evitar que probes fiquem pendentes por muito tempo.
+- **successThreshold**: Número mínimo de verificações consecutivas bem-sucedidas necessárias para considerar que a probe está saudável. Isso é  útil para evitar flutuações temporárias na saúde do container.
+- **failureThreshold**: Número mínimo de verificações consecutivas com falha necessárias para considerar que a probe falhou. Isso é útil para evitar flutuações temporárias na saúde do container.
