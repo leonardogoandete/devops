@@ -141,6 +141,36 @@ spec:
         periodSeconds: 10
 ``` 
 
+Exemplo com o startup probe:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exemplo-pod
+spec:
+  containers:
+  - name: exemplo-container
+    image: exemplo-imagem
+    startupProbe:
+      httpGet:
+        path: /health
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    livenessProbe:
+        httpGet:
+        path: /health
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    readinessProbe:
+      httpGet:
+        path: /ready
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+```
+
 Podemos refinar ainda mais as probes com os seguintes parametros:
 - **initialDelaySeconds**: Tempo em segundos que o Kubernetes espera antes de iniciar a primeira verificação da probe. Isso é útil para dar tempo ao container para iniciar antes de começar a verificar sua saúde.
 - **periodSeconds**: Intervalo em segundos entre as verificações da probe. Isso define com que frequência o Kubernetes verifica a saúde do container.
