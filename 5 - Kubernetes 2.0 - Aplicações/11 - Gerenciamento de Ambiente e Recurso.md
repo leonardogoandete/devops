@@ -34,4 +34,25 @@ Você também pode definir um namespace padrão para o seu contexto atual usando
 kubectl config set-context --current --namespace=desenvolvimento
 ```
 
+### Comunicação entre namespaces
+
+Para fazer a comunicação entre namespaces, podemos usar o formato `<nome-do-servico>.<nome-do-namespace>.svc.cluster.local`. Por exemplo, se temos um serviço chamado `meu-servico` no namespace `desenvolvimento`, podemos acessá-lo a partir de outro namespace usando `meu-servico.desenvolvimento.svc.cluster.local`.
+
+### Objetos Namespaced
+
+Podem existir objetos que não são namespaced, ou seja, que não pertencem a um namespace específico. Exemplos desses objetos incluem:
+- Nodes
+- PersistentVolumes
+- StorageClasses
+
+Podemos consultar quais objetos são namespaced ou não usando o comando:
+```bash
+kubectl api-resources
+```
+O resultado mostrará uma coluna chamada `NAMESPACED` que indica se o recurso é namespaced (`true`) ou não (`false`).
+
+
+
+
+
 
