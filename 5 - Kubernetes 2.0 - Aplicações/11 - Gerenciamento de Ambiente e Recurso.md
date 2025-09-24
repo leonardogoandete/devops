@@ -51,6 +51,17 @@ kubectl api-resources
 ```
 O resultado mostrará uma coluna chamada `NAMESPACED` que indica se o recurso é namespaced (`true`) ou não (`false`).
 
+## Resources
+
+O Kubernetes permite a alocação de recursos como CPU e memória para os containers, garantindo que eles tenham os recursos necessários para funcionar corretamente.
+
+Basicamente definimos limites e o minimo de recursos que um container pode usar. Isso ajuda a evitar que um container consuma todos os recursos do node, afetando outros containers.
+
+
+
+### Resources - Metrics Server
+O Metrics Server é um componente essencial para coletar métricas de uso de recursos (CPU e memória) dos nodes e pods em um cluster Kubernetes. Ele é usado por outros componentes do Kubernetes, como o Horizontal Pod Autoscaler, para tomar decisões baseadas em métricas.
+
 
 
 
