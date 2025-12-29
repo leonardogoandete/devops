@@ -106,5 +106,57 @@ spec:
           storage: 1Gi
 ```
 
+# StatefulSet - Retença de Volume
+Um StatefulSet pode ser configurado para reter volumes persistentes mesmo após a exclusão dos Pods. Isso é útil para aplicativos que precisam manter dados entre reinicializações ou atualizações.
+```yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: example-statefulset
+spec:
+  serviceName: "example-service"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: example
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+      - name: example
+        image: nginx
+        ports:
+        - containerPort: 80
+  volumeClaimTemplates:
+  - metadata:
+      name: example-storage
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  podManagementPolicy: "OrderedReady"
+  persistentVolumeReclaimPolicy: "Retain"
+```
 # Headless Service
+Um Headless Service é um tipo especial de serviço no Kubernetes que não atribui um endereço IP ao serviço. Em vez disso, ele permite que os clientes se conectem diretamente aos Pods subjacentes. Isso é útil para aplicativos que precisam de descoberta de serviço personalizada ou comunicação direta entre Pods, como em StatefulSets.
+
+Exemplo de YAML para um Headless Service:
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: example-headless-service
+spec:
+  clusterIP: None
+  selector:
+    app: example
+  ports:
+  - port: 80
+    targetPort: 80
+```
+
+
 
