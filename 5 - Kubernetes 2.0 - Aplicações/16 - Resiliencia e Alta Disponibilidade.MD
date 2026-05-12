@@ -354,3 +354,178 @@ kubectl taint nodes node-1 key=value:NoSchedule-
 
 Neste exemplo, o nó `node-1` recebe um taint com a chave `key`, valor `value` e efeito `NoSchedule`. Isso significa que nenhum pod será agendado nesse nó, a menos que ele tenha uma toleration correspondente.
 
+
+# Estratégias de Atualização da Aplicação 
+
+As estratégias de atualização da aplicação no Kubernetes permitem que você controle como as atualizações de seus aplicativos são realizadas, garantindo alta disponibilidade e minimizando o tempo de inatividade. As principais estratégias de atualização incluem Rolling Update, Recreate e Blue-Green Deployment.
+
+Por padrão, o Kubernetes usa a estratégia de Rolling Update (Ramped Deployment) para atualizações de Deployment, que permite atualizar os pods gradualmente, garantindo que a aplicação continue disponível durante o processo de atualização.
+
+### Recreate Deployment
+
+O Recreate Deployment é uma estratégia de atualização onde todos os pods existentes são terminados antes que os novos pods sejam criados. Isso pode resultar em um período de inatividade, pois não há pods disponíveis para atender às solicitações durante a transição.
+
+Exemplo de YAML para um Recreate Deployment:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-deployment
+spec:
+  replicas: 3
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: minha-aplicacao
+    spec:
+      containers:
+      - name: meu-container
+        image: minha-imagem
+```
+
+### Ramped Deployment
+
+O Ramped Deployment é uma estratégia de atualização onde os novos pods são criados gradualmente, enquanto os pods antigos são terminados gradualmente. Isso permite que a aplicação continue atendendo às solicitações durante a transição, minimizando o tempo de inatividade.
+
+Exemplo de YAML para um Ramped Deployment:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-deployment
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1 # Permite que no máximo 1 pod esteja indisponível durante a atualização
+      maxSurge: 1 # Permite que no máximo 1 pod adicional seja criado durante a atualização
+  template:
+    metadata:
+      labels:
+        app: minha-aplicacao
+    spec:
+      containers:
+      - name: meu-container
+        image: minha-imagem
+```
+
+### Blue-Green Deployment
+
+O Blue-Green Deployment é uma estratégia de atualização onde duas versões da aplicação são mantidas simultaneamente: a versão atual (Blue) e a nova versão (Green). Quando a nova versão está pronta, o tráfego é redirecionado para ela, minimizando o tempo de inatividade.
+
+Exemplo de YAML para um Blue-Green Deployment:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-deployment-blue
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: minha-aplicacao
+        version: blue
+    spec:
+      containers:
+      - name: meu-container
+        image: minha-imagem:blue
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-deployment-green
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: minha-aplicacao
+        version: green
+    spec:
+      containers:
+      - name: meu-container
+        image: minha-imagem:green
+```
+
+Após implantar ambas as versões, você pode usar um Service para redirecionar o tráfego para a versão Green quando ela estiver pronta para receber solicitações.
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: meu-service
+spec:
+  selector:
+    app: minha-aplicacao
+    version: green # Seleciona os pods da versão Green
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+```
+
+Para esse modelo é necessário o dobro de recursos, pois ambas as versões da aplicação estão ativas simultaneamente. O tráfego pode ser redirecionado usando um Service que seleciona os pods com a label `version=green` quando a nova versão estiver pronta para receber tráfego.
+
+Porem facilita no processo de rollback, pois basta redirecionar o tráfego de volta para a versão Blue em caso de problemas com a versão Green.
+
+### Canary Deployment
+
+O Canary Deployment é uma estratégia de atualização onde a nova versão da aplicação é implantada para um pequeno subconjunto de usuários ou tráfego, permitindo que você teste a nova versão em um ambiente de produção real antes de fazer a transição completa.
+
+Situação: 
+Temos 10 pods rodando a aplicação web, e queremos atualizar para uma nova versão 10% dos pods, ou seja, 1 pod, para testar a nova versão com uma pequena parte do tráfego. Se a nova versão funcionar corretamente, podemos aumentar gradualmente o número de pods com a nova versão até que todos os pods estejam atualizados.
+
+Nesse cenario, teremos 2 deployments: um para a versão atual (Blue) e outro para a nova versão (Green). O deployment Blue terá 9 réplicas, enquanto o deployment Green terá 1 réplica. O tráfego será direcionado para ambos os deployments, permitindo que a nova versão seja testada com uma pequena parte do tráfego. Podendo alterar gradualmente a proporção de tráfego direcionada para a nova versão.
+
+Exemplo de YAML para um Canary Deployment:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-deployment-blue
+spec:
+  replicas: 9
+  template:
+    metadata:
+      labels:
+        app: minha-aplicacao
+    spec:
+      containers:
+      - name: meu-container
+        image: minha-imagem:blue
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-deployment-green
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: minha-aplicacao
+    spec:
+      containers:
+      - name: meu-container
+        image: minha-imagem:green
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+```
+
+Neste exemplo, a nova versão da aplicação é implantada como um canário, com uma pequena porcentagem do tráfego direcionada para ela. Isso permite que você monitore o desempenho e a estabilidade da nova versão antes de fazer a transição completa para todos os usuários. Se a nova versão apresentar problemas, você pode facilmente reverter para a versão anterior sem afetar a maioria dos usuários.
