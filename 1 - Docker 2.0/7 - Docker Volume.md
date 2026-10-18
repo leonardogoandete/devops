@@ -1,0 +1,11 @@
+  
+
+### Tipos:
+
+  
+
+[[bind]]
+
+[[volume]]
+
+[[tmpfs]]

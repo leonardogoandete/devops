@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "ace61374fddac71a",
+    "type": "split",
+    "children": [
+      {
+        "id": "9cb5f3a3f561d817",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69c50f153be8d5f5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2 - Kubernetes/18 - Helm.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e8f3de22a68f1080",
+    "type": "split",
+    "children": [
+      {
+        "id": "4173694943a96446",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c698dd813ed4e240",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8d5f7994ea7f3fbe",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "952e0c922a0c6e8b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2a1975e0fec0bb47",
+    "type": "split",
+    "children": [
+      {
+        "id": "4eff08309feb2d1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "00d24602bdd23af2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2 - Kubernetes/18 - Helm.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f7e4c4e04abc052e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2 - Kubernetes/18 - Helm.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "36acd4f645ec8ade",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d41416394d9df12a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2 - Kubernetes/18 - Helm.md"
+              }
+            }
+          },
+          {
+            "id": "b34c90496c53bb31",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 307.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "69c50f153be8d5f5",
+  "lastOpenFiles": [
+    "2 - Kubernetes/2 - Criando clusters.md",
+    "2 - Kubernetes/1 - Kubernetes.md",
+    "2 - Kubernetes/4 - ReplicaSet.md",
+    "Ansible.md",
+    "2 - Kubernetes/18 - Helm.md",
+    "imagens/primeiro-helm.png",
+    "Pasted.md",
+    "imagens/instalacao-helm-ingress.png",
+    "2 - Kubernetes/17 - Segurança.md",
+    "imagens/exemplo-com-ingress.png",
+    "imagens/exemplo-sem-ingress.png",
+    "imagens/exemplo-affinity-antiaffinity.png",
+    "2 - Kubernetes/3 - POD.md",
+    "2 - Kubernetes/16 - Gerenciando a distribuição de PODs.md",
+    "2 - Kubernetes/9 - ConfigMap e Secret.md",
+    "2 - Kubernetes/15 - Modos de Deploy.md",
+    "README.md",
+    "imagens/selecionar-pasta.png",
+    "2 - Kubernetes/14 - Lidando com volumes no Kubernetes.md",
+    "2 - Kubernetes/13 - Ciclo de Vida de um POD.md",
+    "imagens/erro-init-container.png",
+    "2 - Kubernetes/12 - Gerenciamento de Recursos da Aplicação e dos Ambientes.md",
+    "2 - Kubernetes/11 - Startup, Readiness, Liveness Probes.md",
+    "2 - Kubernetes/10 - Utilizando o Azure Contêiner Registry como repositório privado no Kubernetes.md",
+    "2 - Kubernetes/8 - Namespace.md",
+    "2 - Kubernetes/5 - Deployment.md",
+    "1 - Docker 2.0/Segurança/Trivy.md",
+    "1 - Docker 2.0/Segurança/Docker Scout.md",
+    "1 - Docker 2.0/Segurança/Distroless.md",
+    "1 - Docker 2.0/Segurança/Assinatura de Imagem.md",
+    "1 - Docker 2.0/Docker 2.0.md",
+    "2 - Kubernetes/6 - Services.md",
+    "imagens/service-clusterip.png",
+    "1 - Docker 2.0/8 - Network.md",
+    "imagens/volume-bind.png",
+    "imagens/Untitled 7.png",
+    "imagens",
+    "meu_notion/Docker 2.0/Untitled.canvas",
+    "1 - Docker 2.0/Segurança",
+    "1 - Docker 2.0/8 - Network",
+    "1 - Docker 2.0/7 - Docker Volume",
+    "Notion/TCC/App IF",
+    "2 - Kubernetes",
+    "1 - Docker 2.0",
+    "Notion/TCC",
+    "Notion/DevOps",
+    "Notion"
+  ]
+}
