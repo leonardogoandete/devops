@@ -446,8 +446,38 @@ spec:
           port: 80
 ```
 
+### Network Policies - Policy com restriçao de no namespace
 
+Exemplo de Network Policy que permite o tráfego de entrada (ingress) apenas de Pods com o label `app=frontend` no namespace `default` para Pods com o label `app=backend` no namespace `backend`:
 
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend-to-backend
+  namespace: backend
+spec:
+  podSelector:
+    matchLabels:
+      app: backend
+    policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              name: default
+          podSelector:
+            matchLabels:
+              app: frontend
+      ports:
+        - protocol: TCP
+          port: 80
+```
+
+Lembrando que se utilizar o namespaceSelector e o podSelector juntos, o tráfego só será permitido se ambos os critérios forem atendidos.
+
+Se for utilizado apenas o namespaceSelector, o tráfego será permitido de todos os Pods do namespace selecionado, e se for utilizado apenas o podSelector, o tráfego será permitido de todos os Pods com o label selecionado, independente do namespace.
 
 
 
